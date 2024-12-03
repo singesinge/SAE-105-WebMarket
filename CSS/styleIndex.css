@@ -91,6 +91,11 @@ ul li:hover ul.sousliens {
 }
 
 /* IMAGES MAIN */
+
+.troisImages img {
+    width: 33.33%;
+}
+
 .troisImages {
     display: flex;
     justify-content: space-around;
