@@ -90,22 +90,4 @@ ul li:hover ul.sousliens {
     }
 }
 
-/* IMAGES MAIN */
-
-.troisImages img {
-    width: 33.33%;
-}
-
-.troisImages {
-    display: flex;
-    justify-content: space-around;
-    align-items: left;
-    width: 100%;
-}
-
-.troisImages img {
-    height: calc(100vh - 100px);
-    margin-top: 100px;
-    width: 100%;
-
-}
+/* Vidéo MAIN */
