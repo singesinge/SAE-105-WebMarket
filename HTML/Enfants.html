@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vêtements - Écume & Soleil</title>
+    <link rel="stylesheet" href="../CSS/styleIndex.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <img class="logo" src="../Ressources/Logo.png" alt="Logo de l'entreprise">
+            <ul class="liens">
+                <li><a href="Index.html">Accueil</a></li>
+                <li><a href="Vetements.html">Vetements</a>
+                    <ul class="sousliens">
+                        <li><a href="Homme.html">Homme</a></li>
+                        <li><a href="Femme.html">Femme</a></li>
+                        <li><a href="Enfants.html">Enfants</a></li>
+                    </ul>
+                </li>
+                <li><a href="Accessoires.html">Accessoires</a>
+                    <ul class="sousliens">
+                        <li><a href="SkiNautique.html">Ski Nautique</a></li>
+                        <li><a href="PlancheAVoile.html">Planche à voile</a></li>
+                        <li><a href="SUP.html">SUP</a></li>
+                        <li><a href="Kayak.html">Canoë Kayak</a></li>
+                    </ul>
+                </li>
+                <li><a href="Tutoriels.html">Tutoriels</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+                <li><a href="Panier.html"><img class="panier" src="../Ressources/Panier.png" alt="iconPanier"></li></a>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="categories">
+            <form id="categoryForm">
+                <label for="categorySelect">Choisissez une catégorie :</label>
+                <select id="categorySelect" name="category" onchange="showCategory(this.value)">
+                    <option value="">--Sélectionnez une catégorie--</option>
+                    <option value="tee-shirt">Tee-shirt</option>
+                    <option value="combinaison">Combinaison néoprène</option>
+                    <option value="gants">Gants</option>
+                    <option value="chaussons">Chaussons</option>
+                    <option value="poncho">Poncho</option>
+                </select>
+            </form>
+        </section>
+
+        <section id="enfant">
+            <h2>Vêtements Enfant :</h2>
+            <div class="articles-container">
+                <div class="article">
+                    <img src="../Ressources/poncho-enfant.jpg" alt="Poncho pour enfant">
+                    <p class="description">Poncho léger et pratique pour après les sports nautiques.</p>
+                    <p class="prix">Prix : 15€</p>
+                    <form>
+                        <label for="quantite-poncho">Quantité :</label>
+                        <input type="number" id="quantite-poncho" name="quantite" min="1" value="1">
+                        <button type="submit">Ajouter au panier</button>
+                    </form>
+                </div>
+                <!-- Pour rajouter d'autres articles ENFANT -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer">
+            <div class="footer1">
+                <p>Ecume&Soleil</p>
+                <img src="../Ressources/Logo.png" alt="logo" class="logoFoot">
+                <a href=""><button class="buttonFoot">Achetez Ici</button></a>
+            </div>
+
+            <div class="footer2">
+                <hr>
+            </div>
+
+            <div class="footer3">
+                <div class="leftFoot">
+                    <a href="">Accueil</a>
+                    <a href="">Vetements</a>
+                    <a href="">Accessoires</a>
+                    <a href="">Tutoriels</a>
+                </div>
+
+                <div class="rightFoot">
+                    <a href="">in</a>
+                    <a href="">fb</a>
+                    <a href="">X</a>
+                    <a href="">Contact</a>
+                </div>
+            </div>
+        </div>
+
+
+    </footer>
+</body>
