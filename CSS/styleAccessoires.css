@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+
+}
+
+/* HEADER */
+
+.navbar {
+    background-color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    z-index: 998;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+
+.logo {
+    margin-left: 40px;
+    height: 100%;
+}
+
+.liens {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 50%;
+    text-decoration: none;
+    list-style: none;
+}
+
+.liens a {
+    margin-right: 40px;
+    text-decoration: none;
+    color: #15375a;
+    font-size: 1rem;
+}
+
+.liens li {
+    position: relative;
+}
+
+.sousliens li {
+    display: block;
+}
+
+.sousliens li a {
+    background-color: white;
+    color: #15375a;
+    font-size: 1rem;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+}
+
+.sousliens li a:hover {
+    background-color: #15375a;
+    color: white;
+}
+
+.sousliens {
+    width: 100%;
+    position: absolute;
+    display: none;
+    z-index: 999;
+}
+
+ul li:hover ul.sousliens {
+    display: block;
+}
+
+.panier {
+    height: 25px;
+    margin-right: 40px;
+}
+
+@media screen and (max-width: 900px) {
+    .liens {
+        display: none;
+    }
+}
+
+/* Cartes Corps */
+
+
+/* Style général */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #0056b3;
+}
+
+.corps {
+    margin-top: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    background-color: #0056b3;
+}
+
+/* Style des cartes */
+.card {
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 400px;
+    height: 600px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Image dans les cartes */
+.card img {
+    width: 80%;
+    height: 70%;
+    object-fit: cover;
+    margin: 0 auto;
+    margin-top: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Contenu des cartes */
+.card .content {
+    padding: 15px;
+    text-align: center;
+}
+
+.card h2 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    color: #333;
+}
+
+.card p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+/* Bouton */
+.card button {
+    background-color: #15375a;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+}
+
+.card button:hover {
+    background-color: #15375a;
+}
+
+.card a {
+    text-decoration: none;
+}
+
+
+
+
+/* Footer */
+footer {
+    background-color: plum;
+    height: 300px;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.footer {
+    color: #15375a;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    width: 90%;
+}
+
+.footer1 {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    margin-bottom: 20px;
+}
+
+.footer1 img {
+    height: 100%;
+}
+
+.footer1 button {
+    background-color: #15375a;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.footer1 button:hover {
+    background-color: #0e2842;
+    color: white;
+}
+
+.footer2 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.footer2 hr {
+    width: 80%;
+    border: 0.5px solid rgb(121, 121, 121);
+}
+
+.footer3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    height: 100px;
+}
+
+.footer3 a {
+    text-decoration: none;
+    color: #15375a;
+    font-size: 1rem;
+    margin-left: 20px;
+}
