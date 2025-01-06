@@ -151,11 +151,9 @@ h2 {
     object-fit: cover;
     margin: 0 auto;
     margin-top: 20px;
-    border-radius: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Contenu des cartes */
+/* Contenu des articles */
 .article .content {
     padding: 15px;
     text-align: center;
