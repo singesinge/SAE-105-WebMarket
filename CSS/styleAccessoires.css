@@ -98,16 +98,17 @@ ul li:hover ul.sousliens {
 body {
     margin: 0;
     padding: 0;
-    background-color: #0056b3;
+    background-color: #15375a;
 }
 
 .corps {
     margin-top: 200px;
+    margin-bottom: 100px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-    background-color: #0056b3;
+    background-color: #15375a;
 }
 
 /* Style des cartes */

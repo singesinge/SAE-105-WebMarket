@@ -104,45 +104,99 @@ ul li:hover ul.sousliens {
 
 /* Article */
 
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #15375a;
+}
+
+.corps {
+    margin-top: 200px;
+    margin-bottom: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    background-color: #15375a;
+}
+
+h2 {
+    color: white;
+}
+
+/* Style des cartes */
 .article {
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 400px;
+    height: 600px;
+    transition: transform 0.3s, box-shadow 0.3s;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    gap: 10px;
-    margin-top: 15px;
-    margin-bottom: 50px;
-    padding: 15px;
-    background-color: #ffffff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    max-width: 300px;
-    transition: transform 0.2s, box-shadow 0.2s;
 }
-
 
 .article:hover {
-    transform: scale(1.02);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 
+/* Image dans les cartes */
 .article img {
-    width: 100%;
-    max-width: 150px;
-    height: auto;
-    border-radius: 5px;
+    width: 80%;
+    height: 70%;
+    object-fit: cover;
+    margin: 0 auto;
+    margin-top: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.description {
+/* Contenu des cartes */
+.article .content {
+    padding: 15px;
     text-align: center;
-    font-size: 12px;
-    line-height: 1.5;
 }
 
-.prix {
-    font-weight: bold;
-    color: #0077b6;
-    font-size: 14px;
+.article h2 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    color: #333;
+}
+
+.article p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 15px;
+    text-align: center;
+
+}
+
+/* Bouton */
+.article button {
+    background-color: #15375a;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+}
+
+.article button:hover {
+    background-color: #15375a;
+}
+
+.article a {
+    text-decoration: none;
+}
+
+label {
+    color: white;
 }
 
 form {

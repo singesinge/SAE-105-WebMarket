@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accueil - Écume & Soleil</title>
-    <link rel="stylesheet" href="../CSS/styleIndex.css">
+    <link rel="stylesheet" href="../CSS/stylePageVetements.css">
 </head>
 
 <body>
@@ -36,10 +36,21 @@
         </nav>
     </header>
 
-    <main>
-        <div class="vidAccueil"></div>
-    </main>
-
+    <div class="product-page">
+        <h1>Combianison Homme</h1>
+        <div class="product-details">
+            <img src="../Ressources/combinaison-homme.jpg" alt="Combinaison pour homme">
+            <div class="product-info">
+                <p class="description">Description</p>
+                <p class="prix">Prix : 100€</p>
+                <form>
+                    <label for="quantite-tee-shirt-homme">Quantité :</label>
+                    <input type="number" id="quantite-tee-shirt-homme" name="quantite" min="1" value="1">
+                    <button type="submit">Ajouter au panier</button>
+                </form>
+            </div>
+        </div>
+    </div>
 
     <footer>
         <div class="footer">
@@ -69,8 +80,6 @@
                 </div>
             </div>
         </div>
-
-
     </footer>
 
 </body>
