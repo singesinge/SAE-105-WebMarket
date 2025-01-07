@@ -102,7 +102,7 @@ ul li:hover ul.sousliens {
     background-color: #f9f9f9;
 }
 
-/* Article */
+/* Corps */
 
 body {
     margin: 0;
@@ -112,7 +112,6 @@ body {
 
 .corps {
     margin-top: 200px;
-    margin-bottom: 100px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -124,7 +123,7 @@ h2 {
     color: white;
 }
 
-/* Style des cartes */
+/* Style des articles */
 .article {
     background-color: #fff;
     border-radius: 20px;
