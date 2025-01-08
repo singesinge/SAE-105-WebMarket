@@ -14,7 +14,7 @@
 .navbar {
     background-color: white;
     width: 100%;
-    height: 100px;
+    height: 80px;
     z-index: 998;
     display: flex;
     justify-content: space-between;
@@ -25,7 +25,7 @@
 
 
 .logo {
-    margin-left: 40px;
+    margin-left: 20px;
     height: 100%;
 }
 
@@ -60,6 +60,7 @@
     text-decoration: none;
     display: block;
     padding: 10px;
+    transition: opacity 0.3s ease; /* Ajouter une transition pour l'effet de survol */
 }
 
 .sousliens li a:hover {
@@ -89,7 +90,75 @@ ul li:hover ul.sousliens {
     }
 }
 
-/* Vidéo MAIN */
+/* Styles pour le bandeau promotionnel */
+.promo-banner {
+    background-color: plum; /* Même couleur que le footer */
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 10px 0;
+    font-size: 1em;
+    font-weight: bold;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Ajouter une ombre */
+}
+
+/* Styles pour la vidéo de fond */
+#background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Pour s'assurer que la vidéo est derrière le contenu */
+    opacity: 0.6; /* Réduire l'opacité de la vidéo */
+}
+
+.vidAccueil {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Hauteur de la fenêtre */
+    overflow: hidden;
+}
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    padding: 10px; /* Réduire la taille de l'overlay */
+    border-radius: 10px;
+}
+
+.overlay h1 {
+    font-size: 1.5em; /* Réduire la taille de la police */
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Ajouter une ombre au texte */
+}
+
+.overlay p {
+    font-size: 0.9em; /* Réduire la taille de la police */
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
+}
+
+.shop-button {
+    padding: 10px 20px;
+    font-size: 1em; /* Réduire la taille de la police */
+    background-color: rgba(0, 123, 255, 0.5); /* Couleur de fond transparente */
+    color: white;
+    border: 2px solid white; /* Ajouter une bordure blanche */
+    cursor: pointer;
+    border-radius: 5px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Ajouter une ombre au texte du bouton */
+}
+
+.shop-button:hover {
+    background-color: rgba(0, 86, 179, 0.5); /* Couleur de fond transparente au survol */
+}
+
 
 
 /* Footer */
