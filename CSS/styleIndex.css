@@ -26,7 +26,8 @@
 
 .logo {
     margin-left: 20px;
-    height: 100%;
+    height: 80px; 
+    width: auto;
 }
 
 .liens {
@@ -110,7 +111,7 @@ ul li:hover ul.sousliens {
     height: 100%;
     object-fit: cover;
     z-index: -1; /* Pour s'assurer que la vidéo est derrière le contenu */
-    opacity: 0.6; /* Réduire l'opacité de la vidéo */
+    opacity: 0.7; /* Réduire l'opacité de la vidéo */
 }
 
 .vidAccueil {
@@ -147,16 +148,16 @@ ul li:hover ul.sousliens {
 .shop-button {
     padding: 10px 20px;
     font-size: 1em; /* Réduire la taille de la police */
-    background-color: rgba(0, 123, 255, 0.5); /* Couleur de fond transparente */
+    background-color: rgba(14, 40, 66, 0.5); /* Couleur de fond transparente */
     color: white;
     border: 2px solid white; /* Ajouter une bordure blanche */
     cursor: pointer;
     border-radius: 5px;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Ajouter une ombre au texte du bouton */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9); /* Ajouter une ombre au texte du bouton */
 }
 
 .shop-button:hover {
-    background-color: rgba(0, 86, 179, 0.5); /* Couleur de fond transparente au survol */
+    background-color: rgba(0, 0, 0, 0.5); /* Couleur de fond transparente au survol */
 }
 
 
@@ -194,7 +195,9 @@ footer {
 }
 
 .footer1 img {
-    height: 100%;
+    margin-right: 60px;
+    height: 100px; 
+    width: auto;
 }
 
 .footer1 button {

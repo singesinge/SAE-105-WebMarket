@@ -101,127 +101,49 @@ ul li:hover ul.sousliens {
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Ajouter une ombre */
 }
 
-/* Formulaire de sélection de catégories */
-#categoryForm {
-    margin: 60px 0;
-    text-align: center;
-}
-
-#categoryForm label {
-    font-size: 1.2em;
-    margin-right: 10px;
-}
-
-#categoryForm select {
-    padding: 10px;
-    font-size: 1em;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f9f9f9;
-}
-
-/* Corps */
-
+/* Styles pour la section tutoriels */
 body {
+    background-color: #13375a; /* Même couleur que la page des vêtements */
     margin: 0;
     padding: 0;
-    background-color: #15375a;
 }
 
-.corps {
-    margin-top: 200px;
+h1 {
+    color: white;
+    font-weight: bold;
+}
+
+.tutoriels {
+    padding: 20px;
+    text-align: center;
+}
+
+.video-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-    background-color: #15375a;
 }
 
-h2 {
-    color: white;
+.video {
+    background-color: white;
+    border-radius: 10px; /* Bords arrondis */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5); /* Ombre */
+    padding: 20px;
+    max-width: 560px;
+    margin: 20px;
 }
 
-/* Styles du form */
-
-label {
-    color: white;
+.video h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    font-weight: bold;
 }
 
-/* Styles des articles */
-.article {
-    background-color: #fff;
-    border-radius: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    width: 400px;
-    height: 600px;
-    transition: transform 0.3s, box-shadow 0.3s;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.article:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
-}
-
-/* Image dans les cartes */
-.article img {
-    width: 80%;
-    height: 70%;
-    object-fit: cover;
-    margin: 0 auto;
-    margin-top: 20px;
-}
-
-/* Contenu des articles */
-.article .content {
-    padding: 15px;
-    text-align: center;
-}
-
-.article h2 {
-    font-size: 1.2rem;
-    margin: 10px 0;
-    color: #333;
-}
-
-.article p {
-    font-size: 0.9rem;
-    color: #666;
-    margin-bottom: 15px;
-    text-align: center;
-
-}
-
-/* Bouton */
-.article button {
-    background-color: #15375a;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-size: 0.9rem;
-}
-
-.article button:hover {
-    background-color: #0e2842;
-}
-
-h2 {
-    margin-top: 20px;
-    margin-bottom: 20px; 
-    margin-left: 50px;
-}
-
-.articles-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+.video iframe {
+    height: 315px;
+    border-radius: 10px; /* Bords arrondis pour la vidéo */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4); /* Ombre */
 }
 
 /* Footer */
