@@ -157,7 +157,7 @@ ul li:hover ul.sousliens {
 }
 
 .shop-button:hover {
-    background-color: rgba(0, 0, 0, 0.5); /* Couleur de fond transparente au survol */
+    background-color: rgba(10, 30, 40, 0.5); /* Couleur de fond transparente au survol */
 }
 
 
