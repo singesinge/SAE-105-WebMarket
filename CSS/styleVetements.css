@@ -23,10 +23,9 @@
     position: relative;
 }
 
-
 .logo {
     margin-left: 20px;
-    height: 80px; 
+    height: 80px;
     width: auto;
 }
 
@@ -92,32 +91,13 @@ ul li:hover ul.sousliens {
 
 /* Styles pour le bandeau promotionnel */
 .promo-banner {
-    background-color: plum; /* Même couleur que le footer */
+    background-color: plum;
     color: white;
     text-align: center;
     padding: 10px 0;
     font-size: 1em;
     font-weight: bold;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Ajouter une ombre */
-}
-
-/* Formulaire de sélection de catégories */
-#categoryForm {
-    margin: 60px 0;
-    text-align: center;
-}
-
-#categoryForm label {
-    font-size: 1.2em;
-    margin-right: 10px;
-}
-
-#categoryForm select {
-    padding: 10px;
-    font-size: 1em;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f9f9f9;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
 }
 
 /* Corps */
@@ -141,6 +121,81 @@ body {
 h2 {
     color: white;
 }
+
+
+/* vetements accueil */
+/* Mise en page principale */
+.trimage {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    /* La hauteur de l'écran */
+    margin: 0;
+    padding: 0;
+}
+
+.trimage>div {
+    flex: 1;
+    /* Chaque image occupe 1/3 de la largeur */
+    position: relative;
+    overflow: hidden;
+}
+
+.imgacc {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Ajuste l'image pour remplir son conteneur */
+    display: block;
+    filter: brightness(0.7);
+    /* Assombrit légèrement l'image par défaut */
+    transition: filter 0.5s ease;
+    /* Animation pour éclaircir l'image */
+}
+
+/* Éclaircissement au survol */
+.trimage>div:hover .imgacc {
+    filter: brightness(1);
+    /* L'image s'éclaircit au survol */
+}
+
+/* Style pour les liens et l'overlay */
+.overlay {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    font-size: 3rem;
+    /* Texte plus grand */
+    font-weight: 900;
+    /* Texte encore plus gras */
+    text-transform: uppercase;
+    height: 100%;
+    width: 100%;
+}
+
+.overlay span {
+    position: absolute;
+    z-index: 2;
+    background-color: transparent;
+    /* Pas de fond derrière le texte */
+    padding: 0;
+    border-radius: 0;
+    /* Suppression des bordures */
+}
+
+/* Effet au survol pour le texte */
+.overlay:hover span {
+    transform: scale(1.1);
+    /* Zoom léger sur le texte au survol */
+    transition: 0.3s ease;
+}
+
+
+
+
 
 /* Styles du form */
 
@@ -214,7 +269,7 @@ label {
 
 h2 {
     margin-top: 20px;
-    margin-bottom: 20px; 
+    margin-bottom: 20px;
     margin-left: 50px;
 }
 
@@ -224,6 +279,103 @@ h2 {
     justify-content: center;
     gap: 20px;
 }
+
+/* Styles des filtres */
+
+/* Tout effacer sauf tshirt*/
+
+#t-shirt:checked~.articles-container .vetement2 {
+    display: none;
+}
+
+#t-shirt:checked~.articles-container .vetement3 {
+    display: none;
+}
+
+#t-shirt:checked~.articles-container .vetement4 {
+    display: none;
+}
+
+#t-shirt:checked~.articles-container .vetement5 {
+    display: none;
+}
+
+/* Tout effacer sauf combinaisons*/
+
+#combi:checked~.articles-container .vetement1 {
+    display: none;
+}
+
+#combi:checked~.articles-container .vetement3 {
+    display: none;
+}
+
+#combi:checked~.articles-container .vetement4 {
+    display: none;
+}
+
+#combi:checked~.articles-container .vetement5 {
+    display: none;
+}
+
+/* Tout effacer sauf gants*/
+
+#gants:checked~.articles-container .vetement1 {
+    display: none;
+}
+
+#gants:checked~.articles-container .vetement2 {
+    display: none;
+}
+
+#gants:checked~.articles-container .vetement4 {
+    display: none;
+}
+
+#gants:checked~.articles-container .vetement5 {
+    display: none;
+}
+
+/* Tout effacer sauf chaussons*/
+
+#chaussons:checked~.articles-container .vetement1 {
+    display: none;
+}
+
+#chaussons:checked~.articles-container .vetement2 {
+    display: none;
+}
+
+#chaussons:checked~.articles-container .vetement3 {
+    display: none;
+}
+
+#chaussons:checked~.articles-container .vetement5 {
+    display: none;
+}
+
+/* Tout effacer sauf poncho*/
+
+#poncho:checked~.articles-container .vetement1 {
+    display: none;
+}
+
+#poncho:checked~.articles-container .vetement2 {
+    display: none;
+}
+
+#poncho:checked~.articles-container .vetement3 {
+    display: none;
+}
+
+#poncho:checked~.articles-container .vetement4 {
+    display: none;
+}
+
+
+
+
+
 
 /* Footer */
 footer {
@@ -259,7 +411,7 @@ footer {
 
 .footer1 img {
     margin-right: 60px;
-    height: 100px; 
+    height: 100px;
     width: auto;
 }
 

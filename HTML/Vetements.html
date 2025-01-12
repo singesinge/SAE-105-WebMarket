@@ -42,127 +42,26 @@
     </header>
 
     <main>
-        <section id="categories">
-            <form id="categoryForm">
-                <label for="categorySelect">Choisissez une catégorie :</label>
-                <select id="categorySelect" name="category" onchange="showCategory(this.value)">
-                    <option value="">--Sélectionnez une catégorie--</option>
-                    <option value="tee-shirt">Tee-shirt</option>
-                    <option value="combinaison">Combinaison néoprène</option>
-                    <option value="gants">Gants</option>
-                    <option value="chaussons">Chaussons</option>
-                    <option value="poncho">Poncho</option>
-                </select>
-            </form>
-        </section>
-
-        <section id="homme">
-            <h2>Vêtements Homme :</h2>
-                <div class="articles-container">
-                    <div class="article">
-                        <img src="../Ressources/tee-shirt-homme.jpg" alt="t-shirt Homme">
-                            <h2>Tee-shirt Homme</h2>
-                            <p>Léger, doux et polyvalent, parfait pour un look décontracté au quotidien.</p>
-                            <a href="t-shirt-homme.html"><button>Acheter</button></a>
-                    </div>
-                    <div class="article">
-                        <img src="../Ressources/combinaison-homme.jpg" alt="Combianison Homme">
-                            <h2>Combinaison Homme</h2>
-                            <p>Conçue pour vous garder au chaud et offrir une grande liberté de mouvement dans l’eau.</p>
-                            <a href="combinaison-homme.html"><button>Acheter</button></a>
-                    </div>
-                    <div class="article">
-                        <img src="../Ressources/gants-homme.jpg" alt="Gants Homme">
-                            <h2>Gants Homme</h2>
-                            <p>Protection thermique et flexibilité, parfaits pour vos activités nautiques.</p>
-                            <a href="gants-homme.html"><button>Acheter</button></a>
-                    </div>
-                    <div class="article">
-                        <img src="../Ressources/chausson-homme.jpg" alt="Chausson Homme">
-                            <h2>Chaussons Homme</h2>
-                            <p>Confort, chaleur et adhérence, parfaits pour vos activités aquatiques.</p>
-                            <a href="chaussons-homme.html"><button>Acheter</button></a>
-                    </div>
-                    <div class="article">
-                        <img src="../Ressources/poncho-homme.jpg" alt="Poncho Homme">
-                            <h2>Poncho Homme</h2>
-                            <p>Parfait pour se sécher rapidement après une activité aquatique.</p>
-                            <a href="poncho-homme.html"><button>Acheter</button></a>
-                    </div>
-                </div>
-        </section>
-        
-        <section id="femme">
-            <h2>Vêtements Femme :</h2>
-            <div class="articles-container">
-                <div class="article">
-                    <img src="../Ressources/tee-shirt-femme.jpg" alt="Tee-shirt femme">
-                        <h2>Tee-shirt Femme</h2>
-                        <p>Léger, doux et polyvalent, parfait pour un look décontracté au quotidien.</p>
-                        <a href="t-shirt-femme.html"><button>Acheter</button></a>
-                </div>
-                <div class="article">
-                    <img src="../Ressources/combinaison-femme.jpg" alt="Combinaison Femme">
-                        <h2>Combinaison Femme</h2>
-                        <p>Conçue pour vous garder au chaud et offrir une grande liberté de mouvement dans l’eau.</p>
-                        <a href="combinaison-femme.html"><button>Acheter</button></a>
-                </div>
-                <div class="article">
-                    <img src="../Ressources/gants-homme.jpg" alt="Gants Femme">
-                        <h2>Gants Femme</h2>
-                        <p>Protection thermique et flexibilité, parfaits pour vos activités nautiques.</p>
-                        <a href="gants-femme.html"><button>Acheter</button></a>
-                </div>
-                <div class="article">
-                    <img src="../Ressources/chausson-homme.jpg" alt="Chausson Femme">
-                        <h2>Chaussons Femme</h2>
-                        <p>Confort, chaleur et adhérence, parfaits pour vos activités aquatiques.</p>
-                        <a href="chaussons-femme.html"><button>Acheter</button></a>
-                </div>
-                <div class="article">
-                    <img src="../Ressources/poncho-femme.jpg" alt="Poncho Femme">
-                        <h2>Poncho Femme</h2>
-                        <p>Parfait pour se sécher rapidement après une activité aquatique.</p>
-                        <a href="poncho-femme.html"><button>Acheter</button></a>
-                </div>
+        <div class="trimage">
+            <div class="imghomme">
+                <a href="./Homme.html" class="overlay">
+                    <img src="../Ressources/HommePlage.webp" alt="Vêtements pour homme" class="imgacc">
+                    <span>Homme</span>
+                </a>
             </div>
-        </section>
-
-        <section id="enfant">
-            <h2>Vêtements Enfant :</h2>
-            <div class="articles-container">
-                <div class="article">
-                    <img src="../Ressources/tee-shirt-enfant.jpg" alt="Poncho pour Enfant">
-                        <h2>Tee-shirt Enfant</h2>
-                        <p>Léger, doux et polyvalent, parfait pour un look décontracté au quotidien.</p>
-                        <a href="t-shirt-enfant.html"><button>Acheter</button></a>
-                </div>
-                <div class="article">
-                    <img src="../Ressources/combinaison-enfant.jpg" alt="Poncho pour Enfant">
-                        <h2>Combinaison Enfant</h2>
-                        <p>Conçue pour vous garder au chaud et offrir une grande liberté de mouvement dans l’eau.</p>
-                        <a href="combinaison-enfant.html"><button>Acheter</button></a>
-                </div>
-                <div class="article">
-                    <img src="../Ressources/gants-enfant.jpg" alt="Poncho pour Enfant">
-                        <h2>Gants Enfant</h2>
-                        <p>Protection thermique et flexibilité, parfaits pour vos activités nautiques.</p>
-                        <a href="gants-enfant.html"><button>Acheter</button></a>
-                </div>
-                <div class="article">
-                    <img src="../Ressources/chaussons-enfant.jpg" alt="Poncho pour Enfant">
-                        <h2>Chaussons Enfant</h2>
-                        <p>Confort, chaleur et adhérence, parfaits pour vos activités aquatiques.</p>
-                        <a href="chaussons-enfant.html"><button>Acheter</button></a>
-                </div>
-                <div class="article">
-                    <img src="../Ressources/poncho-enfant.jpg" alt="Poncho pour Enfant">
-                        <h2>Poncho Enfant</h2>
-                        <p>Parfait pour se sécher rapidement après une activité aquatique.</p>
-                        <a href="poncho-enfant.html"><button>Acheter</button></a>
-                </div>
+            <div class="imgfemme">
+                <a href="./Femme.html" class="overlay">
+                    <img src="../Ressources/HommePlage.webp" alt="Vêtements pour femme" class="imgacc">
+                    <span>Femme</span>
+                </a>
             </div>
-        </section>
+            <div class="imgenfant">
+                <a href="./Enfants.html" class="overlay">
+                    <img src="../Ressources/HommePlage.webp" alt="Vêtements pour enfant" class="imgacc">
+                    <span>Enfant</span>
+                </a>
+            </div>
+        </div>
     </main>
 
     <footer>

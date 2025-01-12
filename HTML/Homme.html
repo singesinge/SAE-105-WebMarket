@@ -42,54 +42,59 @@
     </header>
 
     <main>
-        <section id="categories">
-            <form id="categoryForm">
-                <label for="categorySelect">Choisissez une catégorie :</label>
-                <select id="categorySelect" name="category" onchange="showCategory(this.value)">
-                    <option value="">--Sélectionnez une catégorie--</option>
-                    <option value="tee-shirt">Tee-shirt</option>
-                    <option value="combinaison">Combinaison néoprène</option>
-                    <option value="gants">Gants</option>
-                    <option value="chaussons">Chaussons</option>
-                    <option value="poncho">Poncho</option>
-                </select>
-            </form>
-        </section>
-
         <section id="homme">
+            <input type="radio" id="tout" name="tri" checked>
+            <label for="tout">Tout afficher</label>
+            <br>
+            <input type="radio" id="t-shirt" name="tri">
+            <label for="t-shirt">Tee-Shirt</label>
+            <br>
+            <input type="radio" id="combi" name="tri">
+            <label for="combi">Combinaison néoprène</label>
+            <br>
+            <input type="radio" id="gants" name="tri">
+            <label for="gants">Gants</label>
+            <br>
+            <input type="radio" id="chaussons" name="tri">
+            <label for="chaussons">Chaussons</label>
+            <br>
+            <input type="radio" id="poncho" name="tri">
+            <label for="poncho">Poncho</label>
+
+
             <h2>Vêtements Homme :</h2>
-                <div class="articles-container">
-                    <div class="article">
-                        <img src="../Ressources/tee-shirt-homme.jpg" alt="t-shirt Homme">
-                            <h2>Tee-shirt Homme</h2>
-                            <p>Léger, doux et polyvalent, parfait pour un look décontracté au quotidien.</p>
-                            <a href="t-shirt-homme.html"><button>Acheter</button></a>
-                    </div>
-                    <div class="article">
-                        <img src="../Ressources/combinaison-homme.jpg" alt="Combianison Homme">
-                            <h2>Combinaison Homme</h2>
-                            <p>Conçue pour vous garder au chaud et offrir une grande liberté de mouvement dans l’eau.</p>
-                            <a href="combinaison-homme.html"><button>Acheter</button></a>
-                    </div>
-                    <div class="article">
-                        <img src="../Ressources/gants-homme.jpg" alt="Gants Homme">
-                            <h2>Gants Homme</h2>
-                            <p>Protection thermique et flexibilité, parfaits pour vos activités nautiques.</p>
-                            <a href="gants-homme.html"><button>Acheter</button></a>
-                    </div>
-                    <div class="article">
-                        <img src="../Ressources/chausson-homme.jpg" alt="Chausson Homme">
-                            <h2>Chaussons Homme</h2>
-                            <p>Confort, chaleur et adhérence, parfaits pour vos activités aquatiques.</p>
-                            <a href="chaussons-homme.html"><button>Acheter</button></a>
-                    </div>
-                    <div class="article">
-                        <img src="../Ressources/poncho-homme.jpg" alt="Poncho Homme">
-                            <h2>Poncho Homme</h2>
-                            <p>Parfait pour se sécher rapidement après une activité aquatique.</p>
-                            <a href="poncho-homme.html"><button>Acheter</button></a>
-                    </div>
+            <div class="articles-container">
+                <div class="article vetement1">
+                    <img src="../Ressources/tee-shirt-homme.jpg" alt="t-shirt Homme">
+                    <h2>Tee-shirt Homme</h2>
+                    <p>Léger, doux et polyvalent, parfait pour un look décontracté au quotidien.</p>
+                    <a href="t-shirt-homme.html"><button>Acheter</button></a>
                 </div>
+                <div class="article vetement2">
+                    <img src="../Ressources/combinaison-homme.jpg" alt="Combianison Homme">
+                    <h2>Combinaison Homme</h2>
+                    <p>Conçue pour vous garder au chaud et offrir une grande liberté de mouvement dans l’eau.</p>
+                    <a href="combinaison-homme.html"><button>Acheter</button></a>
+                </div>
+                <div class="article vetement3">
+                    <img src="../Ressources/gants-homme.jpg" alt="Gants Homme">
+                    <h2>Gants Homme</h2>
+                    <p>Protection thermique et flexibilité, parfaits pour vos activités nautiques.</p>
+                    <a href="gants-homme.html"><button>Acheter</button></a>
+                </div>
+                <div class="article vetement4">
+                    <img src="../Ressources/chausson-homme.jpg" alt="Chausson Homme">
+                    <h2>Chaussons Homme</h2>
+                    <p>Confort, chaleur et adhérence, parfaits pour vos activités aquatiques.</p>
+                    <a href="chaussons-homme.html"><button>Acheter</button></a>
+                </div>
+                <div class="article vetement5">
+                    <img src="../Ressources/poncho-homme.jpg" alt="Poncho Homme">
+                    <h2>Poncho Homme</h2>
+                    <p>Parfait pour se sécher rapidement après une activité aquatique.</p>
+                    <a href="poncho-homme.html"><button>Acheter</button></a>
+                </div>
+            </div>
         </section>
 
         <footer>
@@ -101,11 +106,11 @@
                     </a>
                     <a href=""><button class="buttonFoot">Achetez Ici</button></a>
                 </div>
-    
+
                 <div class="footer2">
                     <hr>
                 </div>
-    
+
                 <div class="footer3">
                     <div class="leftFoot">
                         <a href="Index.html">Accueil</a>
@@ -114,7 +119,7 @@
                         <a href="Tutoriels.html">Tutoriels</a>
                         <a href="Contact.html">Contact</a>
                     </div>
-    
+
                     <div class="rightFoot">
                         <a href="">in</a>
                         <a href="">fb</a>
@@ -123,7 +128,7 @@
                     </div>
                 </div>
             </div>
-    
-    
+
+
         </footer>
-    </body>
+</body>
