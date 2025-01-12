@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessoires - MMI SDG</title>
+    <link rel="stylesheet" href="../CSS/stylePageVetements.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="Index.html">
+                <img class="logo" src="../Ressources/Logo.png" alt="Logo de l'entreprise">
+            </a>
+            <a href="../HTML_en/SUP.html" class="lang-button">EN</a>
+            <ul class="liens">
+                <li><a href="Index.html">Accueil</a></li>
+                <li><a href="Vetements.html">Vêtements</a>
+                    <ul class="sousliens">
+                        <li><a href="Homme.html">Homme</a></li>
+                        <li><a href="Femme.html">Femme</a></li>
+                        <li><a href="Enfants.html">Enfant</a></li>
+                    </ul>
+                </li>
+                <li><a href="Accessoires.html">Accessoires</a>
+                    <ul class="sousliens">
+                        <li><a href="SkiNautique.html">Ski Nautique</a></li>
+                        <li><a href="PlancheAVoile.html">Planche à voile</a></li>
+                        <li><a href="SUP.html">SUP</a></li>
+                        <li><a href="Kayak.html">Canoë Kayak</a></li>
+                    </ul>
+                </li>
+                <li><a href="Tutoriels.html">Tutoriels</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+                <li><a href="Panier.php"><img class="panier" src="../Ressources/Panier.png" alt="iconPanier"></li></a>
+            </ul>
+        </nav>
+        <div class="promo-banner">
+            <p>Avec le code "BIENVENUE", profitez de 10% de réduction sur toute votre commande !</p>
+        </div>
+    </header>
+
+    <div class="product-page">
+        <h1>SUP</h1>
+        <div class="product-details">
+            <img src="../Ressources/SUP.jpg" alt="SUP">
+            <div class="product-info">
+                <p class="description">Découvrez ce stand-up paddle (SUP) conçu pour allier stabilité, légèreté et performance. Idéal pour les balades, le fitness ou même le surf léger, il s’adapte à tous les niveaux et types d’utilisation. Fabriqué avec des matériaux de qualité, il offre une excellente flottabilité et durabilité pour des sessions agréables sur l’eau. Prenez le large et profitez d’une expérience unique, seul ou entre amis</p>
+                <p class="prix">Prix : 400€</p>
+                <form action="../PHP/add_to_cart.php" method="post">
+                    <label for="quantite-SUP">Quantité :</label>
+                    <input type="number" id="quantite-SUP" name="quantite" min="1" value="1">
+                    <input type="hidden" name="product_id" value="18"> <!-- ID du produit -->
+                    <input type="hidden" name="product_name" value="SUP"> <!-- Nom du produit -->
+                    <input type="hidden" name="product_price" value="400"> <!-- Prix du produit -->
+                    <button type="submit">Ajouter au panier</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer">
+            <div class="footer1">
+                <p>@BUT MMI Toulon</p>
+                <a href="Index.html">
+                    <img class="logo" src="../Ressources/Logo.png" alt="Logo de l'entreprise">
+                </a>
+                <a href=""><button class="buttonFoot">Achetez Ici</button></a>
+            </div>
+
+            <div class="footer2">
+                <hr>
+            </div>
+
+            <div class="footer3">
+                <div class="leftFoot">
+                    <a href="Index.html">Accueil</a>
+                    <a href="Vetements.html">Vetements</a>
+                    <a href="Accessoires.html">Accessoires</a>
+                    <a href="Tutoriels.html">Tutoriels</a>
+                    <a href="Contact.html">Contact</a>
+                </div>
+
+                <div class="rightFoot">
+                    <a href="">in</a>
+                    <a href="">fb</a>
+                    <a href="">X</a>
+                    <a href="">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
