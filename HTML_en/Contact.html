@@ -100,6 +100,15 @@
 
                 <button type="submit">Send</button>
             </form>
+
+            <script>
+                function selectLocation(location) {
+                    document.getElementById('locationInput').value = location;
+
+                    document.getElementById('selectedLocation').textContent = `Ville sélectionnée : ${location}`;
+
+                }
+            </script>
         </section>
     </main>
 
