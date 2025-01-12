@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vêtements - Écume & Soleil</title>
+    <title>Clothing - MMI SDG</title>
     <link rel="stylesheet" href="../CSS/styleVetements.css">
 </head>
 
@@ -14,165 +14,65 @@
             <a href="Index.html">
                 <img class="logo" src="../Ressources/Logo.png" alt="Logo de l'entreprise">
             </a>
+            <a href="../HTML/Vetements.html" class="lang-button">FR</a>
             <ul class="liens">
-                <li><a href="Index.html">Accueil</a></li>
-                <li><a href="Vetements.html">Vêtements</a>
+                <li><a href="Index.html">Home</a></li>
+                <li><a href="Vetements.html">Clothing</a>
                     <ul class="sousliens">
-                        <li><a href="Homme.html">Homme</a></li>
-                        <li><a href="Femme.html">Femme</a></li>
-                        <li><a href="Enfants.html">Enfant</a></li>
+                        <li><a href="Homme.html">Man</a></li>
+                        <li><a href="Femme.html">Woman</a></li>
+                        <li><a href="Enfants.html">Child</a></li>
                     </ul>
                 </li>
-                <li><a href="Accessoires.html">Accessoires</a>
+                <li><a href="Accessoires.html">Accessories</a>
                     <ul class="sousliens">
-                        <li><a href="SkiNautique.html">Ski Nautique</a></li>
-                        <li><a href="PlancheAVoile.html">Planche à voile</a></li>
+                        <li><a href="SkiNautique.html">Water skiing</a></li>
+                        <li><a href="PlancheAVoile.html">Windsurfing</a></li>
                         <li><a href="SUP.html">SUP</a></li>
-                        <li><a href="Kayak.html">Canoë Kayak</a></li>
+                        <li><a href="Kayak.html">Canoeing</a></li>
                     </ul>
                 </li>
-                <li><a href="Tutoriels.html">Tutoriels</a></li>
+                <li><a href="Tutoriels.html">Tutorials</a></li>
                 <li><a href="Contact.html">Contact</a></li>
                 <li><a href="Panier.php"><img class="panier" src="../Ressources/Panier.png" alt="iconPanier"></li></a>
             </ul>
         </nav>
         <div class="promo-banner">
-            <p>Avec le code "BIENVENUE", profitez de 10% de réduction sur toute votre commande !</p>
+            <p>Use the code ‘BIENVENUE’ to get 10% off your entire order!</p>
         </div>
     </header>
 
     <main>
-        <section id="categories">
-            <form id="categoryForm">
-                <label for="categorySelect">Choisissez une catégorie :</label>
-                <select id="categorySelect" name="category" onchange="showCategory(this.value)">
-                    <option value="">--Sélectionnez une catégorie--</option>
-                    <option value="tee-shirt">Tee-shirt</option>
-                    <option value="combinaison">Combinaison néoprène</option>
-                    <option value="gants">Gants</option>
-                    <option value="chaussons">Chaussons</option>
-                    <option value="poncho">Poncho</option>
-                </select>
-            </form>
-        </section>
-
-        <section id="homme">
-            <h2>Vêtements Homme :</h2>
-                <div class="articles-container">
-                    <div class="article">
-                        <img src="../Ressources/tee-shirt-homme.jpg" alt="t-shirt Homme">
-                            <h2>Tee-shirt Homme</h2>
-                            <p>Léger, doux et polyvalent, parfait pour un look décontracté au quotidien.</p>
-                            <a href="t-shirt-homme.html"><button>Acheter</button></a>
-                    </div>
-                    <div class="article">
-                        <img src="../Ressources/combinaison-homme.jpg" alt="Combianison Homme">
-                            <h2>Combinaison Homme</h2>
-                            <p>Conçue pour vous garder au chaud et offrir une grande liberté de mouvement dans l’eau.</p>
-                            <a href="combinaison-homme.html"><button>Acheter</button></a>
-                    </div>
-                    <div class="article">
-                        <img src="../Ressources/gants-homme.jpg" alt="Gants Homme">
-                            <h2>Gants Homme</h2>
-                            <p>Protection thermique et flexibilité, parfaits pour vos activités nautiques.</p>
-                            <a href="gants-homme.html"><button>Acheter</button></a>
-                    </div>
-                    <div class="article">
-                        <img src="../Ressources/chausson-homme.jpg" alt="Chausson Homme">
-                            <h2>Chaussons Homme</h2>
-                            <p>Confort, chaleur et adhérence, parfaits pour vos activités aquatiques.</p>
-                            <a href="chaussons-homme.html"><button>Acheter</button></a>
-                    </div>
-                    <div class="article">
-                        <img src="../Ressources/poncho-homme.jpg" alt="Poncho Homme">
-                            <h2>Poncho Homme</h2>
-                            <p>Parfait pour se sécher rapidement après une activité aquatique.</p>
-                            <a href="poncho-homme.html"><button>Acheter</button></a>
-                    </div>
-                </div>
-        </section>
-        
-        <section id="femme">
-            <h2>Vêtements Femme :</h2>
-            <div class="articles-container">
-                <div class="article">
-                    <img src="../Ressources/tee-shirt-femme.jpg" alt="Tee-shirt femme">
-                        <h2>Tee-shirt Femme</h2>
-                        <p>Léger, doux et polyvalent, parfait pour un look décontracté au quotidien.</p>
-                        <a href="t-shirt-femme.html"><button>Acheter</button></a>
-                </div>
-                <div class="article">
-                    <img src="../Ressources/combinaison-femme.jpg" alt="Combinaison Femme">
-                        <h2>Combinaison Femme</h2>
-                        <p>Conçue pour vous garder au chaud et offrir une grande liberté de mouvement dans l’eau.</p>
-                        <a href="combinaison-femme.html"><button>Acheter</button></a>
-                </div>
-                <div class="article">
-                    <img src="../Ressources/gants-homme.jpg" alt="Gants Femme">
-                        <h2>Gants Femme</h2>
-                        <p>Protection thermique et flexibilité, parfaits pour vos activités nautiques.</p>
-                        <a href="gants-femme.html"><button>Acheter</button></a>
-                </div>
-                <div class="article">
-                    <img src="../Ressources/chausson-homme.jpg" alt="Chausson Femme">
-                        <h2>Chaussons Femme</h2>
-                        <p>Confort, chaleur et adhérence, parfaits pour vos activités aquatiques.</p>
-                        <a href="chaussons-femme.html"><button>Acheter</button></a>
-                </div>
-                <div class="article">
-                    <img src="../Ressources/poncho-femme.jpg" alt="Poncho Femme">
-                        <h2>Poncho Femme</h2>
-                        <p>Parfait pour se sécher rapidement après une activité aquatique.</p>
-                        <a href="poncho-femme.html"><button>Acheter</button></a>
-                </div>
+        <div class="trimage">
+            <div class="imghomme">
+                <a href="./Homme.html" class="overlay">
+                    <img src="../Ressources/HommePlage.webp" alt="Vêtements pour homme" class="imgacc">
+                    <span>Man</span>
+                </a>
             </div>
-        </section>
-
-        <section id="enfant">
-            <h2>Vêtements Enfant :</h2>
-            <div class="articles-container">
-                <div class="article">
-                    <img src="../Ressources/tee-shirt-enfant.jpg" alt="Poncho pour Enfant">
-                        <h2>Tee-shirt Enfant</h2>
-                        <p>Léger, doux et polyvalent, parfait pour un look décontracté au quotidien.</p>
-                        <a href="t-shirt-enfant.html"><button>Acheter</button></a>
-                </div>
-                <div class="article">
-                    <img src="../Ressources/combinaison-enfant.jpg" alt="Poncho pour Enfant">
-                        <h2>Combinaison Enfant</h2>
-                        <p>Conçue pour vous garder au chaud et offrir une grande liberté de mouvement dans l’eau.</p>
-                        <a href="combinaison-enfant.html"><button>Acheter</button></a>
-                </div>
-                <div class="article">
-                    <img src="../Ressources/gants-enfant.jpg" alt="Poncho pour Enfant">
-                        <h2>Gants Enfant</h2>
-                        <p>Protection thermique et flexibilité, parfaits pour vos activités nautiques.</p>
-                        <a href="gants-enfant.html"><button>Acheter</button></a>
-                </div>
-                <div class="article">
-                    <img src="../Ressources/chaussons-enfant.jpg" alt="Poncho pour Enfant">
-                        <h2>Chaussons Enfant</h2>
-                        <p>Confort, chaleur et adhérence, parfaits pour vos activités aquatiques.</p>
-                        <a href="chaussons-enfant.html"><button>Acheter</button></a>
-                </div>
-                <div class="article">
-                    <img src="../Ressources/poncho-enfant.jpg" alt="Poncho pour Enfant">
-                        <h2>Poncho Enfant</h2>
-                        <p>Parfait pour se sécher rapidement après une activité aquatique.</p>
-                        <a href="poncho-enfant.html"><button>Acheter</button></a>
-                </div>
+            <div class="imgfemme">
+                <a href="./Femme.html" class="overlay">
+                    <img src="../Ressources/HommePlage.webp" alt="Vêtements pour femme" class="imgacc">
+                    <span>Women</span>
+                </a>
             </div>
-        </section>
+            <div class="imgenfant">
+                <a href="./Enfants.html" class="overlay">
+                    <img src="../Ressources/HommePlage.webp" alt="Vêtements pour enfant" class="imgacc">
+                    <span>Child</span>
+                </a>
+            </div>
+        </div>
     </main>
 
     <footer>
         <div class="footer">
             <div class="footer1">
-                <p>Ecume&Soleil</p>
+                <p>@BUT MMI Toulon</p>
                 <a href="Index.html">
                     <img class="logo" src="../Ressources/Logo.png" alt="Logo de l'entreprise">
                 </a>
-                <a href=""><button class="buttonFoot">Achetez Ici</button></a>
+                <a href="Vetements.html"><button class="buttonFoot">Buy here</button></a>
             </div>
 
             <div class="footer2">
@@ -181,10 +81,10 @@
 
             <div class="footer3">
                 <div class="leftFoot">
-                    <a href="Index.html">Accueil</a>
-                    <a href="Vetements.html">Vetements</a>
-                    <a href="Accessoires.html">Accessoires</a>
-                    <a href="Tutoriels.html">Tutoriels</a>
+                    <a href="Index.html">home</a>
+                    <a href="Vetements.html">Clothing</a>
+                    <a href="Accessoires.html">Accessories</a>
+                    <a href="Tutoriels.html">Tutorials</a>
                     <a href="Contact.html">Contact</a>
                 </div>
 
@@ -199,4 +99,7 @@
 
 
     </footer>
+
 </body>
+
+</html>

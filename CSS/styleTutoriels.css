@@ -84,6 +84,15 @@ ul li:hover ul.sousliens {
     margin-right: 40px;
 }
 
+.lang-button {
+    margin-left: 10px;
+    padding: 5px 10px;
+    background-color: #15375a;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
 @media screen and (max-width: 900px) {
     .liens {
         display: none;
@@ -98,7 +107,7 @@ ul li:hover ul.sousliens {
     padding: 10px 0;
     font-size: 1em;
     font-weight: bold;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Ajouter une ombre */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); 
 }
 
 /* Styles pour la section tutoriels */

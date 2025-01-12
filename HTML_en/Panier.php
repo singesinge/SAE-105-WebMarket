@@ -32,56 +32,59 @@ foreach ($_SESSION['cart'] as $product) {
 ?>
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Panier</title>
+    <title>Cart - MMI SDG</title>
     <link rel="stylesheet" href="../CSS/stylePanier.css">
 </head>
+
 <body>
     <header>
         <nav class="navbar">
             <a href="Index.html">
                 <img class="logo" src="../Ressources/Logo.png" alt="Logo de l'entreprise">
             </a>
+            <a href="../HTML/Panier.php" class="lang-button">FR</a>
             <ul class="liens">
-                <li><a href="Index.html">Accueil</a></li>
-                <li><a href="Vetements.html">Vêtements</a>
+                <li><a href="Index.html">Home</a></li>
+                <li><a href="Vetements.html">Clothing</a>
                     <ul class="sousliens">
-                        <li><a href="Homme.html">Homme</a></li>
-                        <li><a href="Femme.html">Femme</a></li>
-                        <li><a href="Enfants.html">Enfant</a></li>
+                        <li><a href="Homme.html">Man</a></li>
+                        <li><a href="Femme.html">Woman</a></li>
+                        <li><a href="Enfants.html">Child</a></li>
                     </ul>
                 </li>
-                <li><a href="Accessoires.html">Accessoires</a>
+                <li><a href="Accessoires.html">Accessories</a>
                     <ul class="sousliens">
-                        <li><a href="SkiNautique.html">Ski Nautique</a></li>
-                        <li><a href="PlancheAVoile.html">Planche à voile</a></li>
+                        <li><a href="SkiNautique.html">Water skiing</a></li>
+                        <li><a href="PlancheAVoile.html">Windsurfing</a></li>
                         <li><a href="SUP.html">SUP</a></li>
-                        <li><a href="Kayak.html">Canoë Kayak</a></li>
+                        <li><a href="Kayak.html">Canoeing</a></li>
                     </ul>
                 </li>
-                <li><a href="Tutoriels.html">Tutoriels</a></li>
+                <li><a href="Tutoriels.html">Tutorials</a></li>
                 <li><a href="Contact.html">Contact</a></li>
-                <li><a href="Panier.php"><img class="panier" src="../Ressources/Panier.png" alt="iconPanier"></a></li>
+                <li><a href="Panier.php"><img class="panier" src="../Ressources/Panier.png" alt="iconPanier"></li></a>
             </ul>
         </nav>
         <div class="promo-banner">
-            <p>Avec le code "BIENVENUE", profitez de 10% de réduction sur toute votre commande !</p>
+            <p>Use the code ‘BIENVENUE’ to get 10% off your entire order!</p>
         </div>
     </header>
-    <h1>Votre Panier</h1>
+    <h1>Your cart</h1>
     <div class="cart-container">
         <?php if (empty($_SESSION['cart'])): ?>
-            <p>Votre panier est vide.</p>
+            <p>Your cart is empty.</p>
         <?php else: ?>
             <form action="Panier.php" method="POST">
                 <table>
                     <thead>
                         <tr>
-                            <th>Nom</th>
-                            <th>Prix</th>
-                            <th>Quantité</th>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
                             <th>Total</th>
                             <th>Action</th>
                         </tr>
@@ -97,7 +100,7 @@ foreach ($_SESSION['cart'] as $product) {
                                     </td>
                                     <td><?php echo htmlspecialchars($product['price'] * $product['quantity']); ?> €</td>
                                     <td>
-                                        <button type="submit" name="remove" value="1">Enlever</button>
+                                        <button type="submit" name="remove" value="1">Remove</button>
                                         <input type="hidden" name="product_id" value="<?php echo $productID; ?>">
                                     </td>
                                 </tr>
@@ -106,11 +109,11 @@ foreach ($_SESSION['cart'] as $product) {
                     </tbody>
                 </table>
                 <p class="total">Total: <?php echo $total; ?> €</p>
-                <button type="submit" name="update">Mettre à jour le panier</button>
-                <button type="button" class="pay-button">Payer</button>
+                <button type="submit" name="update">Update cart</button>
+                <button type="button" class="pay-button">Pay</button>
             </form>
         <?php endif; ?>
-        <a class="continue-shopping" href="index.html">Continuer vos achats</a>
+        <a class="continue-shopping" href="index.html">continue shopping </a>
     </div>
 
     <footer>
@@ -120,7 +123,7 @@ foreach ($_SESSION['cart'] as $product) {
                 <a href="Index.html">
                     <img class="logo" src="../Ressources/Logo.png" alt="Logo de l'entreprise">
                 </a>
-                <a href="Vetements.html"><button class="buttonFoot">Achetez Ici</button></a>
+                <a href="Vetements.html"><button class="buttonFoot">Buy here</button></a>
             </div>
 
             <div class="footer2">
@@ -128,11 +131,11 @@ foreach ($_SESSION['cart'] as $product) {
             </div>
 
             <div class="footer3">
-            <div class="leftFoot">
-                    <a href="Index.html">Accueil</a>
-                    <a href="Vetements.html">Vetements</a>
-                    <a href="Accessoires.html">Accessoires</a>
-                    <a href="Tutoriels.html">Tutoriels</a>
+                <div class="leftFoot">
+                    <a href="Index.html">home</a>
+                    <a href="Vetements.html">Clothing</a>
+                    <a href="Accessoires.html">Accessories</a>
+                    <a href="Tutoriels.html">Tutorials</a>
                     <a href="Contact.html">Contact</a>
                 </div>
 
@@ -144,6 +147,10 @@ foreach ($_SESSION['cart'] as $product) {
                 </div>
             </div>
         </div>
+
+
     </footer>
+
 </body>
+
 </html>

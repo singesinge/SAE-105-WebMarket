@@ -35,7 +35,7 @@ foreach ($_SESSION['cart'] as $product) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Panier</title>
+    <title>Panier - MMI SPG</title>
     <link rel="stylesheet" href="../CSS/stylePanier.css">
 </head>
 <body>
@@ -44,6 +44,7 @@ foreach ($_SESSION['cart'] as $product) {
             <a href="Index.html">
                 <img class="logo" src="../Ressources/Logo.png" alt="Logo de l'entreprise">
             </a>
+            <a href="../HTML_en/Panier.php" class="lang-button">EN</a>
             <ul class="liens">
                 <li><a href="Index.html">Accueil</a></li>
                 <li><a href="Vetements.html">Vêtements</a>

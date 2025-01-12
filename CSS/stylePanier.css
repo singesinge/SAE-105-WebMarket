@@ -61,7 +61,7 @@
     text-decoration: none;
     display: block;
     padding: 10px;
-    transition: opacity 0.3s ease; /* Ajouter une transition pour l'effet de survol */
+    transition: opacity 0.3s ease; 
 }
 
 .sousliens li a:hover {
@@ -83,6 +83,15 @@ ul li:hover ul.sousliens {
 .panier {
     height: 25px;
     margin-right: 40px;
+}
+
+.lang-button {
+    margin-left: 10px;
+    padding: 5px 10px;
+    background-color: #15375a;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
 }
 
 @media screen and (max-width: 900px) {

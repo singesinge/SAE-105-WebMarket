@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vêtements - Écume & Soleil</title>
+    <title>Clothing - MMI SDG</title>
     <link rel="stylesheet" href="../CSS/styleVetements.css">
 </head>
 
@@ -14,116 +14,124 @@
             <a href="Index.html">
                 <img class="logo" src="../Ressources/Logo.png" alt="Logo de l'entreprise">
             </a>
+            <a href="../HTML/Enfants.html" class="lang-button">FR</a>
             <ul class="liens">
-                <li><a href="Index.html">Accueil</a></li>
-                <li><a href="Vetements.html">Vêtements</a>
+                <li><a href="Index.html">Home</a></li>
+                <li><a href="Vetements.html">Clothing</a>
                     <ul class="sousliens">
-                        <li><a href="Homme.html">Homme</a></li>
-                        <li><a href="Femme.html">Femme</a></li>
-                        <li><a href="Enfants.html">Enfant</a></li>
+                        <li><a href="Homme.html">Man</a></li>
+                        <li><a href="Femme.html">Woman</a></li>
+                        <li><a href="Enfants.html">Child</a></li>
                     </ul>
                 </li>
-                <li><a href="Accessoires.html">Accessoires</a>
+                <li><a href="Accessoires.html">Accessories</a>
                     <ul class="sousliens">
-                        <li><a href="SkiNautique.html">Ski Nautique</a></li>
-                        <li><a href="PlancheAVoile.html">Planche à voile</a></li>
+                        <li><a href="SkiNautique.html">Water skiing</a></li>
+                        <li><a href="PlancheAVoile.html">Windsurfing</a></li>
                         <li><a href="SUP.html">SUP</a></li>
-                        <li><a href="Kayak.html">Canoë Kayak</a></li>
+                        <li><a href="Kayak.html">Canoeing</a></li>
                     </ul>
                 </li>
-                <li><a href="Tutoriels.html">Tutoriels</a></li>
+                <li><a href="Tutoriels.html">Tutorials</a></li>
                 <li><a href="Contact.html">Contact</a></li>
                 <li><a href="Panier.php"><img class="panier" src="../Ressources/Panier.png" alt="iconPanier"></li></a>
             </ul>
         </nav>
         <div class="promo-banner">
-            <p>Avec le code "BIENVENUE", profitez de 10% de réduction sur toute votre commande !</p>
+            <p>Use the code ‘BIENVENUE’ to get 10% off your entire order!</p>
         </div>
     </header>
 
     <main>
-        <section id="categories">
-            <form id="categoryForm">
-                <label for="categorySelect">Choisissez une catégorie :</label>
-                <select id="categorySelect" name="category" onchange="showCategory(this.value)">
-                    <option value="">--Sélectionnez une catégorie--</option>
-                    <option value="tee-shirt">Tee-shirt</option>
-                    <option value="combinaison">Combinaison néoprène</option>
-                    <option value="gants">Gants</option>
-                    <option value="chaussons">Chaussons</option>
-                    <option value="poncho">Poncho</option>
-                </select>
-            </form>
-        </section>
-
         <section id="enfant">
+            <input type="radio" id="tout" name="tri" checked>
+            <label for="tout">Show all </label>
+            <br>
+            <input type="radio" id="t-shirt" name="tri">
+            <label for="t-shirt">T-Shirt</label>
+            <br>
+            <input type="radio" id="combi" name="tri">
+            <label for="combi">Neoprene wetsuit</label>
+            <br>
+            <input type="radio" id="gants" name="tri">
+            <label for="gants">Gloves</label>
+            <br>
+            <input type="radio" id="chaussons" name="tri">
+            <label for="chaussons">Slippers</label>
+            <br>
+            <input type="radio" id="poncho" name="tri">
+            <label for="poncho">Poncho</label>
+
             <h2>Vêtements Enfant :</h2>
             <div class="articles-container">
-                <div class="article">
+                <div class="article vetement1">
                     <img src="../Ressources/tee-shirt-enfant.jpg" alt="Poncho pour Enfant">
-                        <h2>Tee-shirt Enfant</h2>
-                        <p>Léger, doux et polyvalent, parfait pour un look décontracté au quotidien.</p>
-                        <a href="t-shirt-enfant.html"><button>Acheter</button></a>
+                    <h2>Tee-shirt Enfant</h2>
+                    <p>Lightweight, soft and versatile, perfect for a casual everyday look.</p>
+                    <a href="t-shirt-enfant.html"><button>Buy</button></a>
                 </div>
-                <div class="article">
+                <div class="article vetement2">
                     <img src="../Ressources/combinaison-enfant.jpg" alt="Poncho pour Enfant">
-                        <h2>Combinaison Enfant</h2>
-                        <p>Conçue pour vous garder au chaud et offrir une grande liberté de mouvement dans l’eau.</p>
-                        <a href="combinaison-enfant.html"><button>Acheter</button></a>
+                    <h2>Combinaison Enfant</h2>
+                    <p>Designed to keep you warm and offer great freedom of movement in the water.</p>
+                    <a href="combinaison-enfant.html"><button>Buy</button></a>
                 </div>
-                <div class="article">
+                <div class="article vetement3">
                     <img src="../Ressources/gants-enfant.jpg" alt="Poncho pour Enfant">
-                        <h2>Gants Enfant</h2>
-                        <p>Protection thermique et flexibilité, parfaits pour vos activités nautiques.</p>
-                        <a href="gants-enfant.html"><button>Acheter</button></a>
+                    <h2>Gants Enfant</h2>
+                    <p>Weather protection and flexibility, perfect for your nautical activities.</p>
+                    <a href="gants-enfant.html"><button>Buy</button></a>
                 </div>
-                <div class="article">
+                <div class="article vetement4">
                     <img src="../Ressources/chaussons-enfant.jpg" alt="Poncho pour Enfant">
-                        <h2>Chaussons Enfant</h2>
-                        <p>Confort, chaleur et adhérence, parfaits pour vos activités aquatiques.</p>
-                        <a href="chaussons-enfant.html"><button>Acheter</button></a>
+                    <h2>Chaussons Enfant</h2>
+                    <p>Comfort, warmth and grip, perfect for your aquatic activities.</p>
+                    <a href="chaussons-enfant.html"><button>Buy</button></a>
                 </div>
-                <div class="article">
+                <div class="article vetement5">
                     <img src="../Ressources/poncho-enfant.jpg" alt="Poncho pour Enfant">
-                        <h2>Poncho Enfant</h2>
-                        <p>Parfait pour se sécher rapidement après une activité aquatique.</p>
-                        <a href="poncho-enfant.html"><button>Acheter</button></a>
+                    <h2>Poncho Enfant</h2>
+                    <p>Perfect for drying off quickly after water activities.</p>
+                    <a href="poncho-enfant.html"><button>Buy</button></a>
                 </div>
             </div>
         </section>
 
-    <footer>
-        <div class="footer">
-            <div class="footer1">
-                <p>Ecume&Soleil</p>
-                <a href="Index.html">
-                    <img class="logo" src="../Ressources/Logo.png" alt="Logo de l'entreprise">
-                </a>
-                <a href=""><button class="buttonFoot">Achetez Ici</button></a>
-            </div>
-
-            <div class="footer2">
-                <hr>
-            </div>
-
-            <div class="footer3">
-                <div class="leftFoot">
-                    <a href="Index.html">Accueil</a>
-                    <a href="Vetements.html">Vetements</a>
-                    <a href="Accessoires.html">Accessoires</a>
-                    <a href="Tutoriels.html">Tutoriels</a>
-                    <a href="Contact.html">Contact</a>
+        <footer>
+            <div class="footer">
+                <div class="footer1">
+                    <p>@BUT MMI Toulon</p>
+                    <a href="Index.html">
+                        <img class="logo" src="../Ressources/Logo.png" alt="Logo de l'entreprise">
+                    </a>
+                    <a href="Vetements.html"><button class="buttonFoot">Buy here</button></a>
                 </div>
-
-                <div class="rightFoot">
-                    <a href="">in</a>
-                    <a href="">fb</a>
-                    <a href="">X</a>
-                    <a href="">Contact</a>
+    
+                <div class="footer2">
+                    <hr>
+                </div>
+    
+                <div class="footer3">
+                    <div class="leftFoot">
+                        <a href="Index.html">home</a>
+                        <a href="Vetements.html">Clothing</a>
+                        <a href="Accessoires.html">Accessories</a>
+                        <a href="Tutoriels.html">Tutorials</a>
+                        <a href="Contact.html">Contact</a>
+                    </div>
+    
+                    <div class="rightFoot">
+                        <a href="">in</a>
+                        <a href="">fb</a>
+                        <a href="">X</a>
+                        <a href="">Contact</a>
+                    </div>
                 </div>
             </div>
-        </div>
-
-
-    </footer>
+    
+    
+        </footer>
+    
 </body>
+    
+</html>

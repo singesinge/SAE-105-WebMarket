@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accueil - Écume & Soleil</title>
+    <title>Clothing - MMI SDG</title>
     <link rel="stylesheet" href="../CSS/stylePageVetements.css">
 </head>
 
@@ -14,47 +14,48 @@
             <a href="Index.html">
                 <img class="logo" src="../Ressources/Logo.png" alt="Logo de l'entreprise">
             </a>
+            <a href="../HTML/poncho-enfant.html" class="lang-button">FR</a>
             <ul class="liens">
-                <li><a href="Index.html">Accueil</a></li>
-                <li><a href="Vetements.html">Vêtements</a>
+                <li><a href="Index.html">Home</a></li>
+                <li><a href="Vetements.html">Clothing</a>
                     <ul class="sousliens">
-                        <li><a href="Homme.html">Homme</a></li>
-                        <li><a href="Femme.html">Femme</a></li>
-                        <li><a href="Enfants.html">Enfant</a></li>
+                        <li><a href="Homme.html">Man</a></li>
+                        <li><a href="Femme.html">Woman</a></li>
+                        <li><a href="Enfants.html">Child</a></li>
                     </ul>
                 </li>
-                <li><a href="Accessoires.html">Accessoires</a>
+                <li><a href="Accessoires.html">Accessories</a>
                     <ul class="sousliens">
-                        <li><a href="SkiNautique.html">Ski Nautique</a></li>
-                        <li><a href="PlancheAVoile.html">Planche à voile</a></li>
+                        <li><a href="SkiNautique.html">Water skiing</a></li>
+                        <li><a href="PlancheAVoile.html">Windsurfing</a></li>
                         <li><a href="SUP.html">SUP</a></li>
-                        <li><a href="Kayak.html">Canoë Kayak</a></li>
+                        <li><a href="Kayak.html">Canoeing</a></li>
                     </ul>
                 </li>
-                <li><a href="Tutoriels.html">Tutoriels</a></li>
+                <li><a href="Tutoriels.html">Tutorials</a></li>
                 <li><a href="Contact.html">Contact</a></li>
                 <li><a href="Panier.php"><img class="panier" src="../Ressources/Panier.png" alt="iconPanier"></li></a>
             </ul>
         </nav>
         <div class="promo-banner">
-            <p>Avec le code "BIENVENUE", profitez de 10% de réduction sur toute votre commande !</p>
+            <p>Use the code ‘BIENVENUE’ to get 10% off your entire order!</p>
         </div>
     </header>
 
     <div class="product-page">
-        <h1>Poncho Enfant</h1>
+        <h1>Poncho child</h1>
         <div class="product-details">
-            <img src="../Ressources/poncho-enfant.jpg" alt="Poncho pour Enfant">
+            <img src="../Ressources/poncho-homme.jpg" alt="Poncho pour homme">
             <div class="product-info">
-                <p class="description">Ces chaussons en néoprène offrent une isolation thermique optimale et une excellente protection contre le froid et les objets sous-marins. Leur conception souple et résistante assure confort et adhérence, idéals pour les sports aquatiques comme le surf, la plongée ou le paddle.</p>
-                <p class="prix">Prix : 80€</p>
+                <p class="description">These neoprene booties offer optimum thermal insulation and excellent protection against the cold and underwater objects. Their flexible, hard-wearing design ensures comfort and grip, making them ideal for water sports such as surfing, diving or paddling.</p>
+                <p class="prix">Price : 80€</p>
                 <form action="../PHP/add_to_cart.php" method="post">
-                    <label for="quantite-poncho-enfant">Quantité :</label>
-                    <input type="number" id="quantite-poncho-enfant" name="quantite" min="1" value="1">
-                    <input type="hidden" name="product_id" value="15"> <!-- ID du produit -->
-                    <input type="hidden" name="product_name" value="Poncho Enfant"> <!-- Nom du produit -->
+                    <label for="quantite-poncho-homme">Quantité :</label>
+                    <input type="number" id="quantite-poncho-homme" name="quantite" min="1" value="1">
+                    <input type="hidden" name="product_id" value="13"> <!-- ID du produit -->
+                    <input type="hidden" name="product_name" value="Poncho Homme"> <!-- Nom du produit -->
                     <input type="hidden" name="product_price" value="80"> <!-- Prix du produit -->
-                    <button type="submit">Ajouter au panier</button>
+                    <button type="submit">Add to cart</button>
                 </form>
             </div>
         </div>
@@ -67,7 +68,7 @@
                 <a href="Index.html">
                     <img class="logo" src="../Ressources/Logo.png" alt="Logo de l'entreprise">
                 </a>
-                <a href=""><button class="buttonFoot">Achetez Ici</button></a>
+                <a href="Vetements.html"><button class="buttonFoot">Buy here</button></a>
             </div>
 
             <div class="footer2">
@@ -76,10 +77,10 @@
 
             <div class="footer3">
                 <div class="leftFoot">
-                    <a href="Index.html">Accueil</a>
-                    <a href="Vetements.html">Vetements</a>
-                    <a href="Accessoires.html">Accessoires</a>
-                    <a href="Tutoriels.html">Tutoriels</a>
+                    <a href="Index.html">home</a>
+                    <a href="Vetements.html">Clothing</a>
+                    <a href="Accessoires.html">Accessories</a>
+                    <a href="Tutoriels.html">Tutorials</a>
                     <a href="Contact.html">Contact</a>
                 </div>
 
@@ -91,6 +92,8 @@
                 </div>
             </div>
         </div>
+
+
     </footer>
 
 </body>

@@ -163,14 +163,14 @@ ul li:hover ul.sousliens {
     font-size: 1em; /* Réduire la taille de la police */
     background-color: rgba(14, 40, 66, 0.5); /* Couleur de fond transparente */
     color: white;
-    border: 2px solid white; /* Ajouter une bordure blanche */
+    border: 2px solid white; 
     cursor: pointer;
     border-radius: 5px;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9); /* Ajouter une ombre au texte du bouton */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9); 
 }
 
 .shop-button:hover {
-    background-color: rgba(10, 30, 40, 0.5); /* Couleur de fond transparente au survol */
+    background-color: rgba(10, 30, 40, 0.5); 
 }
 
 

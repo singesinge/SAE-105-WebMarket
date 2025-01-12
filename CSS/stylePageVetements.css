@@ -84,6 +84,15 @@ ul li:hover ul.sousliens {
     margin-right: 40px;
 }
 
+.lang-button {
+    margin-left: 10px;
+    padding: 5px 10px;
+    background-color: #15375a;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
 @media screen and (max-width: 900px) {
     .liens {
         display: none;
