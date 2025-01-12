@@ -26,24 +26,12 @@
         <ul>
             <li><strong>Température maximale :</strong> <span id="temperature_max"></span></li>
             <li><strong>Température minimale :</strong> <span id="temperature_min"></span></li>
-            <li><strong>État du ciel :</strong> <span id="etat_ciel"></span></li>
         </ul>
 
         <a href="Contact.html">Retourner au formulaire</a>
     </main>
 
     <script>
-        // Liste des coordonnées pour chaque lieu
-        const locations = {
-            Nice: { lat: 43.7034, lon: 7.2663 },
-            Marseille: { lat: 43.2965, lon: 5.3698 },
-            Montpellier: { lat: 43.6108, lon: 3.8767 },
-            Bordeaux: { lat: 44.8378, lon: -0.5792 },
-            Nantes: { lat: 47.2184, lon: -1.5536 },
-            Brest: { lat: 48.3904, lon: -4.4861 },
-            Lille: { lat: 50.6292, lon: 3.0573 }
-        };
-
         // Récupération des données du formulaire
         const params = new URLSearchParams(window.location.search);
 
@@ -58,49 +46,51 @@
         const lieu = params.get('lieu');
         document.getElementById('lieu').textContent = lieu;
 
-        // Vérifier si le lieu est valide
-        if (locations[lieu]) {
-            const { lat, lon } = locations[lieu];
+        // Clé API OpenCage
+        const openCageApiKey = "485ac785a5b04dd2bc2d583034375cd6";
 
-            // Construire l'URL de l'API Meteoblue
-            const apiKey = "0Da6AQbMFG42vqW3"; // Votre clé API
-            const url = `https://my.meteoblue.com/packages/basic-day?apikey=${apiKey}&lat=${lat}&lon=${lon}&asl=0&format=json`;
+        // Récupérer les coordonnées avec OpenCage
+        fetch(`https://api.opencagedata.com/geocode/v1/json?q=${lieu}&key=${openCageApiKey}`)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error("Erreur lors de la récupération des coordonnées");
+                }
+                return response.json();
+            })
+            .then(data => {
+                const location = data.results[0]?.geometry;
+                if (!location) {
+                    throw new Error("Coordonnées introuvables");
+                }
+                const { lat, lng } = location;
 
-            // Appeler l'API
-            fetch(url)
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error("Erreur API");
-                    }
-                    return response.json();
-                })
-                .then(data => {
-                    // Récupérer les données météo
-                    const temperatureMax = data.daily.temperature_max[0];
-                    const temperatureMin = data.daily.temperature_min[0];
-                    const cloudCover = data.daily.cloud_cover[0];
+                // Construire l'URL de l'API Meteoblue
+                const meteoblueApiKey = "0Da6AQbMFG42vqW3"; // Remplace par ta clé valide
+                const url = `https://my.meteoblue.com/packages/basic-day?apikey=${meteoblueApiKey}&lat=${lat}&lon=${lng}&asl=0&format=json`;
 
-                    // Mettre à jour les champs
-                    document.getElementById('temperature_max').textContent = `${temperatureMax}°C`;
-                    document.getElementById('temperature_min').textContent = `${temperatureMin}°C`;
-                    document.getElementById('etat_ciel').textContent =
-                        cloudCover < 20
-                            ? "Ensoleillé"
-                            : cloudCover < 50
-                                ? "Partiellement nuageux"
-                                : "Très nuageux";
-                })
-                .catch(error => {
-                    console.error("Erreur API :", error);
-                    document.getElementById('temperature_max').textContent = "Impossible de récupérer les données.";
-                    document.getElementById('temperature_min').textContent = "Impossible de récupérer les données.";
-                    document.getElementById('etat_ciel').textContent = "Impossible de récupérer les données.";
-                });
-        } else {
-            document.getElementById('temperature_max').textContent = "Lieu non pris en charge.";
-            document.getElementById('temperature_min').textContent = "Lieu non pris en charge.";
-            document.getElementById('etat_ciel').textContent = "Lieu non pris en charge.";
-        }
+                // Appeler l'API Meteoblue
+                return fetch(url);
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error("Erreur API Meteoblue");
+                }
+                return response.json();
+            })
+            .then(data => {
+                // Récupérer les données météo
+                const temperatureMax = data.daily?.temperature_max?.[0] || "Non disponible";
+                const temperatureMin = data.daily?.temperature_min?.[0] || "Non disponible";
+
+                // Mettre à jour les champs
+                document.getElementById('temperature_max').textContent = `${temperatureMax}°C`;
+                document.getElementById('temperature_min').textContent = `${temperatureMin}°C`;
+            })
+            .catch(error => {
+                console.error("Erreur :", error);
+                document.getElementById('temperature_max').textContent = "Impossible de récupérer les données.";
+                document.getElementById('temperature_min').textContent = "Impossible de récupérer les données.";
+            });
     </script>
 </body>
 
