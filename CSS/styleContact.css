@@ -26,7 +26,7 @@
 
 .logo {
     margin-left: 20px;
-    height: 80px; 
+    height: 80px;
     width: auto;
 }
 
@@ -101,18 +101,21 @@ ul li:hover ul.sousliens {
 
 /* Styles pour le bandeau promotionnel */
 .promo-banner {
-    background-color: plum; /* Même couleur que le footer */
+    background-color: plum;
+    /* Même couleur que le footer */
     color: white;
     text-align: center;
     padding: 10px 0;
     font-size: 1em;
     font-weight: bold;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Ajouter une ombre */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    /* Ajouter une ombre */
 }
 
 /* Styles pour le corps */
 body {
-    background-color: #13375a; /* Même couleur que la page des vêtements */
+    background-color: #13375a;
+    /* Même couleur que la page des vêtements */
     margin: 0;
     padding: 0;
 }
@@ -129,7 +132,7 @@ h1 {
     padding: 20px;
     max-width: 600px;
     margin: 40px auto;
-    
+
 }
 
 .contact-form h1 {
@@ -137,7 +140,7 @@ h1 {
     margin-bottom: 20px;
 }
 
-.contact-form label p{
+.contact-form label p {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
@@ -165,6 +168,12 @@ h1 {
 .contact-form button:hover {
     background-color: #0e2842;
     color: white;
+}
+
+/* Style map */
+
+area {
+    cursor: pointer;
 }
 
 /* Footer */
@@ -201,7 +210,7 @@ footer {
 
 .footer1 img {
     margin-right: 60px;
-    height: 100px; 
+    height: 100px;
     width: auto;
 }
 
