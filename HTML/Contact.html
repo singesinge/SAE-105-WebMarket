@@ -83,7 +83,8 @@
                     <input type="text" id="sport" name="sport" class="input-field" required>
                 </div>
 
-                <p>Lieu de pratique envisagé :</p>
+                <p id="selectedLocation" class="selected-location">Lieu sélectionné : Aucun</p>
+
                 <div class="mapFrance">
                     <img usemap="#mapFrance" src="../Ressources/MapFrance.png" alt="Carte de France" class="map-image">
                     <map name="mapFrance">
@@ -109,12 +110,17 @@
                     <input type="hidden" name="lieu" id="locationInput">
                 </div>
 
+
+
                 <button type="submit" class="submit-button">Envoyer</button>
             </form>
 
             <script>
                 function selectLocation(location) {
                     document.getElementById('locationInput').value = location;
+
+                    document.getElementById('selectedLocation').textContent = `Ville sélectionnée : ${location}`;
+
                 }
             </script>
         </section>
