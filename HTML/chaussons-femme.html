@@ -33,7 +33,7 @@
                 </li>
                 <li><a href="Tutoriels.html">Tutoriels</a></li>
                 <li><a href="Contact.html">Contact</a></li>
-                <li><a href="Panier.html"><img class="panier" src="../Ressources/Panier.png" alt="iconPanier"></li></a>
+                <li><a href="Panier.php"><img class="panier" src="../Ressources/Panier.png" alt="iconPanier"></li></a>
             </ul>
         </nav>
         <div class="promo-banner">
@@ -48,9 +48,12 @@
             <div class="product-info">
                 <p class="description">Ces chaussons en néoprène offrent une isolation thermique optimale et une excellente protection contre le froid et les objets sous-marins. Leur conception souple et résistante assure confort et adhérence, idéals pour les sports aquatiques comme le surf, la plongée ou le paddle.</p>
                 <p class="prix">Prix : 30€</p>
-                <form>
-                    <label for="quantite-tee-shirt-homme">Quantité :</label>
-                    <input type="number" id="quantite-tee-shirt-homme" name="quantite" min="1" value="1">
+                <form action="../PHP/add_to_cart.php" method="post">
+                    <label for="quantite-chaussons-femme">Quantité :</label>
+                    <input type="number" id="quantite-chaussons-femme" name="quantite" min="1" value="1">
+                    <input type="hidden" name="product_id" value="11"> <!-- ID du produit -->
+                    <input type="hidden" name="product_name" value="Chaussons Femme"> <!-- Nom du produit -->
+                    <input type="hidden" name="product_price" value="30"> <!-- Prix du produit -->
                     <button type="submit">Ajouter au panier</button>
                 </form>
             </div>

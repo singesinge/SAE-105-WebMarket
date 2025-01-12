@@ -30,7 +30,6 @@ foreach ($_SESSION['cart'] as $product) {
     }
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -39,39 +38,40 @@ foreach ($_SESSION['cart'] as $product) {
     <title>Panier</title>
     <link rel="stylesheet" href="../CSS/stylePanier.css">
 </head>
-    <body>
-        <header>
-            <nav class="navbar">
-                <a href="Index.html">
-                    <img class="logo" src="../Ressources/Logo.png" alt="Logo de l'entreprise">
-                </a>
-                <ul class="liens">
-                    <li><a href="Index.html">Accueil</a></li>
-                    <li><a href="Vetements.html">Vêtements</a>
-                        <ul class="sousliens">
-                            <li><a href="Homme.html">Homme</a></li>
-                            <li><a href="Femme.html">Femme</a></li>
-                            <li><a href="Enfants.html">Enfant</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="Accessoires.html">Accessoires</a>
-                        <ul class="sousliens">
-                            <li><a href="SkiNautique.html">Ski Nautique</a></li>
-                            <li><a href="PlancheAVoile.html">Planche à voile</a></li>
-                            <li><a href="SUP.html">SUP</a></li>
-                            <li><a href="Kayak.html">Canoë Kayak</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="Tutoriels.html">Tutoriels</a></li>
-                    <li><a href="Contact.html">Contact</a></li>
-                    <li><a href="Panier.html"><img class="panier" src="../Ressources/Panier.png" alt="iconPanier"></li></a>
-                </ul>
-            </nav>
-            <div class="promo-banner">
-                <p>Avec le code "BIENVENUE", profitez de 10% de réduction sur toute votre commande !</p>
-            </div>
-        </header>
-        <h1>Votre Panier</h1>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="Index.html">
+                <img class="logo" src="../Ressources/Logo.png" alt="Logo de l'entreprise">
+            </a>
+            <ul class="liens">
+                <li><a href="Index.html">Accueil</a></li>
+                <li><a href="Vetements.html">Vêtements</a>
+                    <ul class="sousliens">
+                        <li><a href="Homme.html">Homme</a></li>
+                        <li><a href="Femme.html">Femme</a></li>
+                        <li><a href="Enfants.html">Enfant</a></li>
+                    </ul>
+                </li>
+                <li><a href="Accessoires.html">Accessoires</a>
+                    <ul class="sousliens">
+                        <li><a href="SkiNautique.html">Ski Nautique</a></li>
+                        <li><a href="PlancheAVoile.html">Planche à voile</a></li>
+                        <li><a href="SUP.html">SUP</a></li>
+                        <li><a href="Kayak.html">Canoë Kayak</a></li>
+                    </ul>
+                </li>
+                <li><a href="Tutoriels.html">Tutoriels</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+                <li><a href="Panier.php"><img class="panier" src="../Ressources/Panier.png" alt="iconPanier"></a></li>
+            </ul>
+        </nav>
+        <div class="promo-banner">
+            <p>Avec le code "BIENVENUE", profitez de 10% de réduction sur toute votre commande !</p>
+        </div>
+    </header>
+    <h1>Votre Panier</h1>
+    <div class="cart-container">
         <?php if (empty($_SESSION['cart'])): ?>
             <p>Votre panier est vide.</p>
         <?php else: ?>
@@ -105,12 +105,13 @@ foreach ($_SESSION['cart'] as $product) {
                         <?php endforeach; ?>
                     </tbody>
                 </table>
-                <p>Total: <?php echo $total; ?> €</p>
+                <p class="total">Total: <?php echo $total; ?> €</p>
                 <button type="submit" name="update">Mettre à jour le panier</button>
+                <button type="button" class="pay-button">Payer</button>
             </form>
         <?php endif; ?>
-        <a href="index.html">Continuer vos achats</a>
-    </body>
+        <a class="continue-shopping" href="index.html">Continuer vos achats</a>
+    </div>
 
     <footer>
         <div class="footer">
@@ -119,7 +120,7 @@ foreach ($_SESSION['cart'] as $product) {
                 <a href="Index.html">
                     <img class="logo" src="../Ressources/Logo.png" alt="Logo de l'entreprise">
                 </a>
-                <a href=""><button class="buttonFoot">Achetez Ici</button></a>
+                <a href="Vetements.html"><button class="buttonFoot">Achetez Ici</button></a>
             </div>
 
             <div class="footer2">
@@ -143,4 +144,5 @@ foreach ($_SESSION['cart'] as $product) {
             </div>
         </div>
     </footer>
+</body>
 </html>

@@ -33,7 +33,7 @@
                 </li>
                 <li><a href="Tutoriels.html">Tutoriels</a></li>
                 <li><a href="Contact.html">Contact</a></li>
-                <li><a href="Panier.html"><img class="panier" src="../Ressources/Panier.png" alt="iconPanier"></li></a>
+                <li><a href="Panier.php"><img class="panier" src="../Ressources/Panier.png" alt="iconPanier"></li></a>
             </ul>
         </nav>
         <div class="promo-banner">
@@ -48,9 +48,12 @@
             <div class="product-info">
                 <p class="description">Optez pour ce t-shirt alliant confort et style, conçu avec un tissu doux et respirant pour un maximum de bien-être. Sa coupe intemporelle s’adapte à toutes les morphologies, faisant de lui un incontournable de votre garde-robe. Idéal pour un look décontracté ou comme base pour vos tenues plus travaillées, ce t-shirt vous accompagne en toute occasion.</p>
                 <p class="prix">Prix : 20€</p>
-                <form>
-                    <label for="quantite-tee-shirt-homme">Quantité :</label>
-                    <input type="number" id="quantite-tee-shirt-homme" name="quantite" min="1" value="1">
+                <form action="../PHP/add_to_cart.php" method="post">
+                    <label for="quantite-tee-shirt-femme">Quantité :</label>
+                    <input type="number" id="quantite-tee-shirt-femme" name="quantite" min="1" value="1">
+                    <input type="hidden" name="product_id" value="2"> <!-- ID du produit -->
+                    <input type="hidden" name="product_name" value="Tee-shirt Femme"> <!-- Nom du produit -->
+                    <input type="hidden" name="product_price" value="20"> <!-- Prix du produit -->
                     <button type="submit">Ajouter au panier</button>
                 </form>
             </div>

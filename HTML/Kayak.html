@@ -33,7 +33,7 @@
                 </li>
                 <li><a href="Tutoriels.html">Tutoriels</a></li>
                 <li><a href="Contact.html">Contact</a></li>
-                <li><a href="Panier.html"><img class="panier" src="../Ressources/Panier.png" alt="iconPanier"></li></a>
+                <li><a href="Panier.php"><img class="panier" src="../Ressources/Panier.png" alt="iconPanier"></li></a>
             </ul>
         </nav>
         <div class="promo-banner">
@@ -48,9 +48,12 @@
             <div class="product-info">
                 <p class="description">Ce canoë-kayak robuste et stable est parfait pour les escapades en solo ou à deux. Conçu pour s’adapter à tous types d’eaux, il offre confort et durabilité pour des aventures nautiques inoubliables.</p>
                 <p class="prix">Prix : 500€</p>
-                <form>
-                    <label for="quantite-tee-shirt-homme">Quantité :</label>
-                    <input type="number" id="quantite-tee-shirt-homme" name="quantite" min="1" value="1">
+                <form action="../PHP/add_to_cart.php" method="post">
+                    <label for="quantite-canoë-kayak">Quantité :</label>
+                    <input type="number" id="quantite-canoë-kayak" name="quantite" min="1" value="1">
+                    <input type="hidden" name="product_id" value="19"> <!-- ID du produit -->
+                    <input type="hidden" name="product_name" value="Canoë Kayak"> <!-- Nom du produit -->
+                    <input type="hidden" name="product_price" value="500"> <!-- Prix du produit -->
                     <button type="submit">Ajouter au panier</button>
                 </form>
             </div>

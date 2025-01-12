@@ -33,7 +33,7 @@
                 </li>
                 <li><a href="Tutoriels.html">Tutoriels</a></li>
                 <li><a href="Contact.html">Contact</a></li>
-                <li><a href="Panier.html"><img class="panier" src="../Ressources/Panier.png" alt="iconPanier"></li></a>
+                <li><a href="Panier.php"><img class="panier" src="../Ressources/Panier.png" alt="iconPanier"></li></a>
             </ul>
         </nav>
         <div class="promo-banner">
@@ -48,9 +48,12 @@
             <div class="product-info">
                 <p class="description">Découvrez ce stand-up paddle (SUP) conçu pour allier stabilité, légèreté et performance. Idéal pour les balades, le fitness ou même le surf léger, il s’adapte à tous les niveaux et types d’utilisation. Fabriqué avec des matériaux de qualité, il offre une excellente flottabilité et durabilité pour des sessions agréables sur l’eau. Prenez le large et profitez d’une expérience unique, seul ou entre amis</p>
                 <p class="prix">Prix : 400€</p>
-                <form>
-                    <label for="quantite-tee-shirt-homme">Quantité :</label>
-                    <input type="number" id="quantite-tee-shirt-homme" name="quantite" min="1" value="1">
+                <form action="../PHP/add_to_cart.php" method="post">
+                    <label for="quantite-SUP">Quantité :</label>
+                    <input type="number" id="quantite-SUP" name="quantite" min="1" value="1">
+                    <input type="hidden" name="product_id" value="18"> <!-- ID du produit -->
+                    <input type="hidden" name="product_name" value="SUP"> <!-- Nom du produit -->
+                    <input type="hidden" name="product_price" value="400"> <!-- Prix du produit -->
                     <button type="submit">Ajouter au panier</button>
                 </form>
             </div>

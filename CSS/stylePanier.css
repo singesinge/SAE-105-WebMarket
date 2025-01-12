@@ -108,6 +108,22 @@ body {
     background-color: #13375a;
 }
 
+h1 {
+    margin-top: 20px;
+    color: #13375a;
+    text-align: center;
+}
+
+
+.cart-container {
+    background-color: white;
+    padding: 20px;
+    margin: 100px auto;
+    width: 80%;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
 table {
     width: 80%;
     margin: 20px auto;
@@ -143,10 +159,39 @@ button {
     border: none;
     padding: 10px 20px;
     cursor: pointer;
+    border-radius: 5px;
 }
 
 button:hover {
-    background-color: #1f4b7a;
+    background-color: #0e2842;
+}
+
+.total {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.continue-shopping {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    color: #15375a;
+    text-decoration: none;
+}
+
+.continue-shopping:hover {
+    text-decoration: underline;
+}
+
+.pay-button {
+    background-color: #28a745;
+    margin-left: 10px;
+}
+
+.pay-button:hover {
+    background-color: #218838;
 }
 
 /* Footer */
