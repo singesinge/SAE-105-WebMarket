@@ -22,10 +22,13 @@
         <p><strong>Email :</strong> <span id="email"></span></p>
         <p><strong>Sport pratiqué :</strong> <span id="sport"></span></p>
         <p><strong>Lieu sélectionné :</strong> <span id="lieu"></span></p>
+
         <p><strong>Météo :</strong></p>
         <ul>
-            <li><strong>Température maximale :</strong> <span id="temperature_max"></span></li>
-            <li><strong>Température minimale :</strong> <span id="temperature_min"></span></li>
+            <p><strong>Température minimale :</strong> <span id="temperature_min"></span></p>
+            <p><strong>Température maximale :</strong> <span id="temperature_max"></span></p>
+            <p><strong>Pourcentage de précipitations :</strong> <span id="precipitation"></span></p>
+            <p><strong>Vitesse du vent :</strong> <span id="windspeed"></span></p>
         </ul>
 
         <a href="Contact.html">Retourner au formulaire</a>
@@ -78,18 +81,40 @@
                 return response.json();
             })
             .then(data => {
-                // Récupérer les données météo
-                const temperatureMax = data.daily?.temperature_max?.[0] || "Non disponible";
-                const temperatureMin = data.daily?.temperature_min?.[0] || "Non disponible";
+                // Accéder à l'objet 'data_day' dans la réponse
+                const dataDay = data.data_day;
 
-                // Mettre à jour les champs
-                document.getElementById('temperature_max').textContent = `${temperatureMax}°C`;
-                document.getElementById('temperature_min').textContent = `${temperatureMin}°C`;
+                // Récupérer les données nécessaires
+                const temperatureMin = dataDay.temperature_min?.[0];          // Température minimale du jour
+                const temperatureMax = dataDay.temperature_max?.[0];          // Température maximale du jour
+                const precipitation = dataDay.precipitation?.[0];             // Précipitations du jour
+                const windspeed = dataDay.windspeed_mean?.[0];                // Vitesse moyenne du vent du jour
+
+                // Vérifier si les éléments existent dans le DOM avant de les modifier
+                const temperatureMinElement = document.getElementById('temperature_min');
+                const temperatureMaxElement = document.getElementById('temperature_max');
+                const precipitationElement = document.getElementById('precipitation');
+                const windspeedElement = document.getElementById('windspeed');
+
+                // Afficher les informations dans le DOM
+                if (temperatureMinElement) {
+                    temperatureMinElement.textContent = temperatureMin !== undefined ? `${temperatureMin}°C` : "Température minimale non disponible";
+                }
+
+                if (temperatureMaxElement) {
+                    temperatureMaxElement.textContent = temperatureMax !== undefined ? `${temperatureMax}°C` : "Température maximale non disponible";
+                }
+
+                if (precipitationElement) {
+                    precipitationElement.textContent = precipitation !== undefined ? `${precipitation}%` : "Précipitations non disponibles";
+                }
+
+                if (windspeedElement) {
+                    windspeedElement.textContent = windspeed !== undefined ? `${windspeed} m/s` : "Vitesse du vent non disponible";
+                }
             })
             .catch(error => {
-                console.error("Erreur :", error);
-                document.getElementById('temperature_max').textContent = "Impossible de récupérer les données.";
-                document.getElementById('temperature_min').textContent = "Impossible de récupérer les données.";
+                console.error('Erreur lors de la récupération des données météo:', error);
             });
     </script>
 </body>

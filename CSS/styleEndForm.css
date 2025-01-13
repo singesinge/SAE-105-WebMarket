@@ -10,7 +10,7 @@ body {
 
 /* Header */
 header {
-    background-color: #007BFF;
+    background-color: #15375a;
     color: #fff;
     padding: 20px 10px;
     text-align: center;
@@ -38,7 +38,7 @@ main ul {
 }
 
 main p strong {
-    color: #007BFF;
+    color: #15375a;
 }
 
 ul {
@@ -55,7 +55,7 @@ ul li {
 }
 
 ul li strong {
-    color: #007BFF;
+    color: #15375a;
 }
 
 /* Lien de retour */
@@ -63,7 +63,7 @@ a {
     display: inline-block;
     margin-top: 20px;
     text-decoration: none;
-    background: #007BFF;
+    background: #15375a;
     color: #fff;
     padding: 10px 20px;
     border-radius: 5px;
@@ -72,7 +72,7 @@ a {
 }
 
 a:hover {
-    background: #0056b3;
+    background: #081f35;
 }
 
 /* Responsive Design */
