@@ -102,20 +102,17 @@ ul li:hover ul.sousliens {
 /* Styles pour le bandeau promotionnel */
 .promo-banner {
     background-color: plum;
-    /* Même couleur que le footer */
     color: white;
     text-align: center;
     padding: 10px 0;
     font-size: 1em;
     font-weight: bold;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
-    /* Ajouter une ombre */
 }
 
 /* Styles pour le corps */
 body {
     background-color: #13375a;
-    /* Même couleur que la page des vêtements */
     margin: 0;
     padding: 0;
 }
