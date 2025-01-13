@@ -59,7 +59,7 @@ foreach ($_SESSION['cart'] as $product) {
                 <li><a href="Accessoires.html">Accessories</a>
                     <ul class="sousliens">
                         <li><a href="SkiNautique.html">Water skiing</a></li>
-                        <li><a href="PlancheAVoile.html">Windsurfing</a></li>
+                        <li><a href="PlancheAVoile.html">Windsurf</a></li>
                         <li><a href="SUP.html">SUP</a></li>
                         <li><a href="Kayak.html">Canoeing</a></li>
                     </ul>

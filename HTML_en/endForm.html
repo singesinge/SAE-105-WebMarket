@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Récapitulatif</title>
+    <link rel="stylesheet" href="../CSS/styleEndForm.css">
+</head>
+
+<body>
+    <header>
+        <h1>Summary of your information</h1>
+    </header>
+
+    <main>
+        <p><strong>Civility :</strong> <span id="civilite"></span></p>
+        <p><strong>Name :</strong> <span id="nom"></span></p>
+        <p><strong>First name :</strong> <span id="prenom"></span></p>
+        <p><strong>Address :</strong> <span id="adresse"></span></p>
+        <p><strong>Date of birth :</strong> <span id="date_naissance"></span></p>
+        <p><strong>Email :</strong> <span id="email"></span></p>
+        <p><strong>Sport practiced :</strong> <span id="sport"></span></p>
+        <p><strong>Selected location :</strong> <span id="lieu"></span></p>
+
+        <p><strong>Weather :</strong></p>
+        <ul>
+            <p><strong>Minimum temperature :</strong> <span id="temperature_min"></span></p>
+            <p><strong>Maximum temperature :</strong> <span id="temperature_max"></span></p>
+            <p><strong>Percentage of precipitation :</strong> <span id="precipitation"></span></p>
+            <p><strong>Wind speed :</strong> <span id="windspeed"></span></p>
+        </ul>
+
+        <a href="Contact.html">Back to form</a>
+    </main>
+
+    <script>
+        // Récupération des données du formulaire
+        const params = new URLSearchParams(window.location.search);
+
+        // Affichage des données dans le HTML
+        document.getElementById('civilite').textContent = params.get('civilite');
+        document.getElementById('nom').textContent = params.get('nom');
+        document.getElementById('prenom').textContent = params.get('prenom');
+        document.getElementById('adresse').textContent = params.get('adresse');
+        document.getElementById('date_naissance').textContent = params.get('date_naissance');
+        document.getElementById('email').textContent = params.get('email');
+        document.getElementById('sport').textContent = params.get('sport');
+        const lieu = params.get('lieu');
+        document.getElementById('lieu').textContent = lieu;
+
+        // Clé API OpenCage
+        const openCageApiKey = "485ac785a5b04dd2bc2d583034375cd6";
+
+        // Récupérer les coordonnées avec OpenCage
+        fetch(`https://api.opencagedata.com/geocode/v1/json?q=${lieu}&key=${openCageApiKey}`)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error("Erreur lors de la récupération des coordonnées");
+                }
+                return response.json();
+            })
+            .then(data => {
+                const location = data.results[0]?.geometry;
+                if (!location) {
+                    throw new Error("Coordonnées introuvables");
+                }
+                const { lat, lng } = location;
+
+                // Construire l'URL de l'API Meteoblue
+                const meteoblueApiKey = "0Da6AQbMFG42vqW3"; // Remplace par ta clé valide
+                const url = `https://my.meteoblue.com/packages/basic-day?apikey=${meteoblueApiKey}&lat=${lat}&lon=${lng}&asl=0&format=json`;
+
+                // Appeler l'API Meteoblue
+                return fetch(url);
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error("Erreur API Meteoblue");
+                }
+                return response.json();
+            })
+            .then(data => {
+                // Accéder à l'objet 'data_day' dans la réponse
+                const dataDay = data.data_day;
+
+                // Récupérer les données nécessaires
+                const temperatureMin = dataDay.temperature_min?.[0];          // Température minimale du jour
+                const temperatureMax = dataDay.temperature_max?.[0];          // Température maximale du jour
+                const precipitation = dataDay.precipitation?.[0];             // Précipitations du jour
+                const windspeed = dataDay.windspeed_mean?.[0];                // Vitesse moyenne du vent du jour
+
+                // Vérifier si les éléments existent dans le DOM avant de les modifier
+                const temperatureMinElement = document.getElementById('temperature_min');
+                const temperatureMaxElement = document.getElementById('temperature_max');
+                const precipitationElement = document.getElementById('precipitation');
+                const windspeedElement = document.getElementById('windspeed');
+
+                // Afficher les informations dans le DOM
+                if (temperatureMinElement) {
+                    temperatureMinElement.textContent = temperatureMin !== undefined ? `${temperatureMin}°C` : "Température minimale non disponible";
+                }
+
+                if (temperatureMaxElement) {
+                    temperatureMaxElement.textContent = temperatureMax !== undefined ? `${temperatureMax}°C` : "Température maximale non disponible";
+                }
+
+                if (precipitationElement) {
+                    precipitationElement.textContent = precipitation !== undefined ? `${precipitation}%` : "Précipitations non disponibles";
+                }
+
+                if (windspeedElement) {
+                    windspeedElement.textContent = windspeed !== undefined ? `${windspeed} m/s` : "Vitesse du vent non disponible";
+                }
+            })
+            .catch(error => {
+                console.error('Erreur lors de la récupération des données météo:', error);
+            });
+    </script>
+</body>
+
+</html>

@@ -27,7 +27,7 @@
                 <li><a href="Accessoires.html">Accessories</a>
                     <ul class="sousliens">
                         <li><a href="SkiNautique.html">Water skiing</a></li>
-                        <li><a href="PlancheAVoile.html">Windsurfing</a></li>
+                        <li><a href="PlancheAVoile.html">Windsurf</a></li>
                         <li><a href="SUP.html">SUP</a></li>
                         <li><a href="Kayak.html">Canoeing</a></li>
                     </ul>
@@ -45,33 +45,47 @@
     <main>
         <section class="contact-form">
             <h1>Contactez-nous</h1>
-            <form id="contactForm" action="recapitulatif.html" method="GET">
-                <label for="civilite">Title :</label>
-                <select id="civilite" name="civilite" required>
-                    <option value="Monsieur">Mr.</option>
-                    <option value="Madame">Ms.</option>
-                    <option value="Mademoiselle">Other</option>
-                </select>
+            <form id="contactForm" action="endForm.html" method="GET">
+                <div class="form-group">
+                    <label for="civilite">Civility :</label>
+                    <select id="civilite" name="civilite" class="input-select" required>
+                        <option value="Monsieur">Mr.</option>
+                        <option value="Madame">Ms.</option>
+                        <option value="Autre">Other</option>
+                    </select>
+                </div>
 
-                <label for="nom">Name :</label>
-                <input type="text" id="nom" name="nom" required>
+                <div class="form-group">
+                    <label for="nom">Name :</label>
+                    <input type="text" id="nom" name="nom" class="input-field" required>
+                </div>
 
-                <label for="prenom">First name :</label>
-                <input type="text" id="prenom" name="prenom" required>
+                <div class="form-group">
+                    <label for="prenom">First name :</label>
+                    <input type="text" id="prenom" name="prenom" class="input-field" required>
+                </div>
 
-                <label for="adresse">Address :</label>
-                <input type="text" id="adresse" name="adresse" required>
+                <div class="form-group">
+                    <label for="adresse">Address :</label>
+                    <input type="text" id="adresse" name="adresse" class="input-field" required>
+                </div>
 
-                <label for="date_naissance">Date of birth :</label>
-                <input type="date" id="date_naissance" name="date_naissance" required>
+                <div class="form-group">
+                    <label for="date_naissance">Date of birth :</label>
+                    <input type="date" id="date_naissance" name="date_naissance" class="input-field" required>
+                </div>
 
-                <label for="email">Email address :</label>
-                <input type="email" id="email" name="email" required>
+                <div class="form-group">
+                    <label for="email">Email address :</label>
+                    <input type="email" id="email" name="email" class="input-field" required>
+                </div>
 
-                <label for="sport">Sport practised :</label>
-                <input type="text" id="sport" name="sport" required>
+                <div class="form-group">
+                    <label for="sport">Sport practiced :</label>
+                    <input type="text" id="sport" name="sport" class="input-field" required>
+                </div>
 
-                <p id="selectedLocation" class="selected-location">selected location  : None</p>
+                <p id="selectedLocation" class="selected-location">Selected location : None</p>
 
                 <div class="mapFrance">
                     <img usemap="#mapFrance" src="../Ressources/MapFrance.png" alt="Carte de France" class="map-image">
@@ -92,13 +106,15 @@
                         <area alt="Brest" title="Brest"
                             coords="80,145,53,152,19,136,20,107,58,84,94,89,99,103,104,126,94,129" shape="poly"
                             onclick="selectLocation('Brest')">
-                        <area alt="Nord" title="Nord" coords="112,118,93,71,215,8,220,26,228,38,212,68,182,99,149,113"
-                            shape="poly" onclick="selectLocation('Nord')">
+                        <area alt="Lille" title="Lille" coords="112,118,93,71,215,8,220,26,228,38,212,68,182,99,149,113"
+                            shape="poly" onclick="selectLocation('Lille')">
                     </map>
                     <input type="hidden" name="lieu" id="locationInput">
                 </div>
 
-                <button type="submit">Send</button>
+
+
+                <button type="submit" class="submit-button">Envoyer</button>
             </form>
 
             <script>
